@@ -1,4 +1,8 @@
 /* Color Scheme */
+html,body {
+	height: 100%;
+	margin: 0px;
+	}
 
 .background {
 	 background-color: #F8F8F8	;
@@ -16,8 +20,8 @@
 .submenue {
 	background-color: none;
 	height: 100%;
-	width: 15%;
-	border-right: 10px;
+	width: 20%;
+	border-right: 2px;
 	border-right-style: solid;
 	border-color: #001b45;
 }
