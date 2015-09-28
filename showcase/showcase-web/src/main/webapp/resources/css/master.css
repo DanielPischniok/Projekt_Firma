@@ -1,8 +1,11 @@
 /* Color Scheme */
 
-.colorscheme {
+.background {
 	 background-color: #45669B;
 	 }
 	 
-
+.menue {
+	background-color: #00368A;
+	height: 50px;
+}
 
