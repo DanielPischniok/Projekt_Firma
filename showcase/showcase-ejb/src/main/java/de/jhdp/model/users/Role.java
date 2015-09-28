@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -22,7 +23,10 @@ public class Role implements Serializable {
 	
 	private String roleName;
 	
-	@OneToMany
+	@ManyToOne
+	private ApplicationUser user;
+	
+	@OneToMany(mappedBy="role")
 	private List<RoleAttribute> attributes;
 
 	public String getRoleName() {

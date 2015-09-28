@@ -11,7 +11,9 @@
 <h:body styleClass="background">
  <div id="menue" class="menue"><ui:include src="/WEB-INF/templates/menu.xhtml" /></div>
  <div id="submenue" class="submenue"></div>
- <div id="content"></div>
+ <div id="content">
+ 	<ui:insert name="content"></ui:insert>
+ </div>
  <div id="footer"></div>
 </h:body>
 </html>
