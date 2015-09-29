@@ -26,6 +26,8 @@ html,body {
 	border-right: 2px;
 	border-right-style: solid;
 	border-color: #001b45;
+	float: left;
+	margin-right: 20px;
 }
 
 
