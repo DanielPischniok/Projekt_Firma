@@ -3,6 +3,11 @@ html,body {
 	height: 100%;
 	margin: 0px;
 	}
+	
+a.menu {
+	text-decoration: none;
+	color: #f8f8f8;
+}
 
 .background {
 	 background-color: #F8F8F8	;

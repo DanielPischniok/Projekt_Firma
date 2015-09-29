@@ -19,4 +19,10 @@
 li{
 	display: inline;
 	padding: 0px;
+	margin-left: 5px;
+}
+
+ul{
+	padding: 0;
+	margin: 0;
 }
