@@ -1,17 +1,22 @@
 package de.jhdp.web.login;
 
-import javax.enterprise.context.RequestScoped;
+import java.io.IOException;
+import java.io.Serializable;
+
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
+import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 
 @Named
-@RequestScoped
-public class LoginBean {
+@ViewScoped
+public class LoginBean implements Serializable{
 	
+	private static final long serialVersionUID = 1L;
+
 	private String username, password;
 	
 	@Inject
@@ -21,13 +26,17 @@ public class LoginBean {
 	}
 	
 	public String login(){
+		String originalURI = 
+				(String) FacesContext.getCurrentInstance().getExternalContext()
+					.getRequestParameterMap().get("redirect");
 		HttpServletRequest request = 
 				(HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
 		
 		try {
 			request.login(username, password);
 			jsfUtils.addGlobalFacesMessage(FacesMessage.SEVERITY_INFO, "Login successfull");
-		} catch (ServletException e) {
+			FacesContext.getCurrentInstance().getExternalContext().redirect(originalURI);
+		} catch (ServletException | IOException e) {
 			jsfUtils.addGlobalFacesMessage(FacesMessage.SEVERITY_ERROR, "Login failed");
 			e.printStackTrace();
 		}
