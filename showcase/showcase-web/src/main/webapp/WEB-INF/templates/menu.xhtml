@@ -10,25 +10,24 @@
    <h:outputStylesheet name="css/menue.css" />
 </h:head>
 <h:body>
-<table class="menue_table">
-  <tr>
-    <td class="logo">
-    	<img src="#{request.contextPath}/resources/gfx/menue_logo.png"></img>
-     </td>
-    <td class="modul">
-    	<a href="#" class="modulcontent"><img src="#{request.contextPath}/resources/gfx/button_start.png" title="Startcenter"/></a>
-    	<a href="#" class="modulcontent"><img src="#{request.contextPath}/resources/gfx/button_projekte.png" title="Projekte" /></a>
-  		<a href="#" class="modulcontent"><img src="#{request.contextPath}/resources/gfx/button_finanzen.png" title="Finanzen" /></a>
-    	<a href="#" class="modulcontent"><img src="#{request.contextPath}/resources/gfx/button_admin2.png" title="Administration" /></a>
-      </td>
-    <td class="benutzer">
-    	<ul>
-    	<li class="benutzertext">Benutzer VAR</li>
-    	<li class="benutzerimg"><a href="#" class="modulcontent"><img src="#{request.contextPath}/resources/gfx/button_such.png" title="Suche"/></a></li>
-    	</ul>	
-     </td>
-  </tr>
-</table>
+<ul>
+	<li class="logo">
+	<h4>PROJEKT FIRMA</h4>
+	</li>
+	<li class="module">
+	<a href="#" class="menue">Startcenter</a> 
+	<a href="#" class="menue">Projekte</a> 
+	<a href="#" class="menue">Finanzen</a> 
+	<a href="#" class="menue">Administration</a>
+	</li>
+	<li class="benutzer">
+	<h5>VARBenutzername</h5>
+	</li>
+	<li class="suche">
+	<input type="text" class="m_such" />
+	<input type="submit"/>
+	</li>
+</ul>
 
 </h:body>
 
