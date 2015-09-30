@@ -8,12 +8,17 @@
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
    <h:outputStylesheet name="css/master.css" />
 </h:head>
-<h:body styleClass="background">
- <div id="menue" class="menue"><ui:include src="/WEB-INF/templates/menu.xhtml" /></div>
- <div id="submenue" class="submenue"></div>
+<h:body>
+ <div id="menue">
+ 		<ui:include src="/WEB-INF/templates/menu.xhtml" />
+  </div>
+  
+ <div id="submenue"></div>
+ 
  <div id="content">
  	<ui:insert name="content"></ui:insert>
  </div>
+ 
  <div id="footer"></div>
 </h:body>
 </html>

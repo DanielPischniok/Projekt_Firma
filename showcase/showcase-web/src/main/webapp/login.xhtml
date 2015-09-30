@@ -4,19 +4,19 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html">
 
-	<ui:composition template="/WEB-INF/templates/mastertemplate.xhtml">
+	<ui:composition template="/WEB-INF/templates/mastertemplatewosub.xhtml">
 	<ui:define name="content">
-		<h1>Login</h1>
 		<div id="logindiv">
 			<fieldset>
+			<legend>Login</legend>
 				<h:form>
-					<h:messages errorStyle="color: red;" />
+					<h:messages errorStyle="color: red; text-decoration: underline;" />
 					<h:panelGrid columns="2">
 						<h:outputLabel value="Username: " />
-						<h:inputText value="#{loginBean.username}" />
+						<h:inputText value="#{loginBean.username}" styleClass="m_such"/>
 
 						<h:outputLabel value="Password: " />
-						<h:inputSecret value="#{loginBean.password}" />
+						<h:inputSecret value="#{loginBean.password}" styleClass="m_such" />
 					</h:panelGrid>
 					<h:commandButton action="#{loginBean.login()}" value="Login" >
 						<f:param name="redirect" value="#{requestScope['javax.servlet.forward.request_uri']}" />

@@ -4,54 +4,31 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html">
 <h:head>
-   <title>title</title>
+   <title>Menue</title>
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
    <h:outputStylesheet name="css/menue.css" />
 </h:head>
 <h:body>
-<table class="menue_table">
-<tr>
-<td class="logo"><img src="#{request.contextPath}/resources/gfx/menue_logo.png" alt="Logo" /></td>
-<td class="modul">
-	<ul>
-		<li>
-			<a class="menu" href="#">
-			<img src="#{request.contextPath}/resources/gfx/button_start.png" alt="Start" title="Start"/>
-			</a> 
-		</li>
-		<li>
-			<a class="menu" href="#">
-			<img src="#{request.contextPath}/resources/gfx/button_projekte.png" alt="Projekte" />
-			</a>
-		</li>
-		<li>
-			<a class="menu" href="#">
-			<img src="#{request.contextPath}/resources/gfx/button_finanzen.png" alt="Finanzen" />
-			</a>
-		</li>
-		<li>
-			<a class="menu" href="#">
-			<img src="#{request.contextPath}/resources/gfx/button_admin2.png" alt="Admin" />
-			</a>
-		</li>
-	</ul>
-</td>
 
-<td class="benutzer">
 <ul>
-	<li>
-	Bild login/out
+	<li class="logo">
+	<h4>PROJEKT FIRMA</h4>
 	</li>
-	<li>
-	var Benutzername
+	<li class="module">
+	<a href="#" class="menue">Startcenter</a> 
+	<a href="#" class="menue">Projekte</a> 
+	<a href="#" class="menue">Finanzen</a> 
+	<a href="#" class="menue">Administration</a>
 	</li>
-	<li>
-	<img src="#{request.contextPath}/resources/gfx/button_surch.png" alt="such"/>
+	<li class="benutzer">
+	<h5>VARBenutzername</h5>
+	</li>
+	<li class="suche">
+	<input type="text" class="m_such" />
+	<input type="submit"/>
 	</li>
 </ul>
-</td>
-</tr>
-</table>
+
 </h:body>
 
 </html>

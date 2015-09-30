@@ -1,38 +1,183 @@
+/* ALLGEMEINE Regel */
 
 html,body {
 	height: 100%;
 	margin: 0px;
+	font-family: HelveticaNeue, Arial, sans-serif;
+	font-size: 14px;
+	color: #001B45;
+	background-color: #F8F8F8;
+	margin: 0;
 	}
-	
-a.menu {
-	text-decoration: none;
-	color: #f8f8f8;
+
+@fontface {
+	font-family: 'HelveticaNeue';
+	src: url("showcase-web/src/main/webapp/resources/fonts/HelveticaNeue.dfont");
 }
 
-.background {
-	 background-color: #F8F8F8	;
-	 margin: 0;
-	 }
+/*----------------------------------------------------------------------------------------*/
+
+/* DIV Layer */
 	 
-.menue {
+#menue {
+	display: block;
 	background-color: #00368A;
-	height: 50px;
+	height: 25px;
 	width: 100%;
 	margin: 0;
 	padding: 0;
 	box-shadow: 0px 5px 2px #001b45;
 	layout: block;
+	margin-top: -15px;
 }
 
-.submenue {
+#submenue {
+	position: absolute;
+	display: block;
 	background-color: none;
 	height: 100%;
 	width: 20%;
-	border-right: 2px;
+	border-right: 1px;
 	border-right-style: solid;
 	border-color: #001b45;
 	float: left;
 	margin-right: 20px;
 }
 
+#content {
+	position: absolute;
+	left: 20%;
+	display: block;
+	margin-left: 10px;
+	height: 100%;
+	width: 80%;
+	float: left;
+}
 
+#footer {
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 10px;
+}
+
+#logindiv {
+	position: absolute;
+	width: 250px;
+	height: 250px;
+	top: 25%;
+	left: 25%;
+	margin-top: -75px;
+	margin-left: -75px;
+}
+/*----------------------------------------------------------------------------------------*/
+
+/*FORM Regel */
+
+fieldset {
+	margin: 20px;
+	width: 250px;
+	border: 1px solid #001B45;
+	border-radius: 5px;
+	padding: 20px;
+	text-decoration: none; 
+}
+
+legend {
+	background-color: #00368A;
+	border: 1px solid #001B45;
+	border-radius: 5px;
+	padding: 10px;
+	color: #F8F8F8
+	
+}
+
+input.m_such {
+	font-size: 95%;
+	border-radius:5px;
+	border-width: 1px;
+	border-color: #001b45;
+	background-color: #F8F8F8;
+}
+
+/*----------------------------------------------------------------------------------------*/
+
+/*IMG Regel*/
+
+img.menue {
+	padding: 0px;
+	margin: 0px;
+	display: inline;
+	padding-right: 20px;
+	float: right;
+}
+
+/*----------------------------------------------------------------------------------------*/
+
+/*HYPERLINK Regel*/
+
+a.menue {
+	color: #F8F8F8;
+	margin-right: 20px;
+	padding-left: 8px;
+	padding-right: 8px;
+	text-decoration: none;
+	border-right: 1px solid #F8F8F8;
+	border-left: 1px solid #F8F8F8;
+}
+
+a.menue:HOVER {
+	background-color: #45669B;
+}
+
+a.menue:ACTIVE {
+	background-color: transparent;
+}
+
+/*----------------------------------------------------------------------------------------*/
+
+/*TEXT Regel */
+
+h1 {
+	font-family: HelveticaNeue, Arial, sans-serif;
+	font-size: 18px;
+	color: #001B45;
+	font-style: none;
+	font-weight: bold;
+}
+
+h2 {
+	font-family: HelveticaNeue, Arial, sans-serif;
+	font-size: 14px;
+	color: #001B45;
+	font-style: none;
+	font-weight: bold;
+}
+
+h3 {
+	
+	font-family: HelveticaNeue, Arial, sans-serif;
+	font-size: 12px;
+	color: #001B45;
+	font-style: none;
+	font-weight: normal;
+}
+
+h4 {
+	font-family: HelveticaNeue, Arial, sans-serif;
+	font-size: 14px;
+	color: #F8F8F8;
+	font-style: none;
+	font-weight: bold;
+	display: inline;
+}
+
+h5 {
+	font-family: HelveticaNeue, Arial, sans-serif;
+	font-size: 12px;
+	color: #F8F8F8;
+	font-style: none;
+	font-weight: bold;
+	display: inline; 
+	padding-right: 20px;
+}
