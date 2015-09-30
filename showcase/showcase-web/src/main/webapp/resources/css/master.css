@@ -22,7 +22,7 @@ html,body {
 #menue {
 	display: block;
 	background-color: #00368A;
-	height: 22px;
+	height: 25px;
 	width: 100%;
 	margin: 0;
 	padding: 0;
@@ -61,6 +61,15 @@ html,body {
 	height: 10px;
 }
 
+#logindiv {
+	position: absolute;
+	width: 250px;
+	height: 250px;
+	top: 25%;
+	left: 25%;
+	margin-top: -75px;
+	margin-left: -75px;
+}
 /*----------------------------------------------------------------------------------------*/
 
 /*FORM Regel */
@@ -84,9 +93,10 @@ legend {
 }
 
 input.m_such {
-	font-size: 100%;
+	font-size: 95%;
 	border-radius:5px;
-	border-width: 0px;
+	border-width: 1px;
+	border-color: #001b45;
 	background-color: #F8F8F8;
 }
 
