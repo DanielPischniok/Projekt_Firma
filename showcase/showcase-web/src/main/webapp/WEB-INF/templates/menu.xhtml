@@ -5,54 +5,31 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:p="http://primefaces.org/ui">
 <h:head>
-   <title>title</title>
+   <title>Menue</title>
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
    <h:outputStylesheet name="css/menue.css" />
 </h:head>
 <h:body>
 <table class="menue_table">
-<tr>
-<td class="logo"><img src="#{request.contextPath}/resources/gfx/menue_logo.png" alt="Logo" /></td>
-<td class="modul">
-	<ul>
-		<li>
-			<a class="menu" href="#">
-			<img src="#{request.contextPath}/resources/gfx/button_start.png" alt="Start" />
-			</a>
-		</li>
-		<li>
-			<a class="menu" href="#">
-			<img src="#{request.contextPath}/resources/gfx/button_projekte.png" alt="Projekte" />
-			</a>
-		</li>
-		<li>
-			<a class="menu" href="#">
-			<img src="#{request.contextPath}/resources/gfx/button_finanzen.png" alt="Finanzen" />
-			</a>
-		</li>
-		<li>
-			<a class="menu" href="#">
-			<img src="#{request.contextPath}/resources/gfx/button_admin2.png" alt="Admin" />
-			</a>
-		</li>
-	</ul>
-</td>
-
-<td class="benutzer">
-<ul>
-	<li>
-	Bild login/out
-	</li>
-	<li>
-	var Benutzername
-	</li>
-	<li>
-	<img src="#{request.contextPath}/resources/gfx/button_surch.png" alt="such"/>
-	</li>
-</ul>
-</td>
-</tr>
+  <tr>
+    <td class="logo">
+    	<img src="#{request.contextPath}/resources/gfx/menue_logo.png"></img>
+     </td>
+    <td class="modul">
+    	<a href="#" class="modulcontent"><img src="#{request.contextPath}/resources/gfx/button_start.png" title="Startcenter"/></a>
+    	<a href="#" class="modulcontent"><img src="#{request.contextPath}/resources/gfx/button_projekte.png" title="Projekte" /></a>
+  		<a href="#" class="modulcontent"><img src="#{request.contextPath}/resources/gfx/button_finanzen.png" title="Finanzen" /></a>
+    	<a href="#" class="modulcontent"><img src="#{request.contextPath}/resources/gfx/button_admin2.png" title="Administration" /></a>
+      </td>
+    <td class="benutzer">
+    	<ul>
+    	<li class="benutzertext">Benutzer VAR</li>
+    	<li class="benutzerimg"><a href="#" class="modulcontent"><img src="#{request.contextPath}/resources/gfx/button_such.png" title="Suche"/></a></li>
+    	</ul>	
+     </td>
+  </tr>
 </table>
+
 </h:body>
 
 </html>

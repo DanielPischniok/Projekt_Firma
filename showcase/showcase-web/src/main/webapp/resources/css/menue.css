@@ -1,28 +1,53 @@
 .menue_table {
 	width: 100%;
-	height: 100%;
+	height: 45px;
 	padding: 5px 5px 5px 5px;
+	display: table;
+	vertical-align: middle;
 }
 
 .logo{
 	width: 20%;
+	display: table-cell;
 }
 
 .modul{
 	width:50%;
+	display: table-cell;
+	text-align: center;
+}
+
+.modulcontent{
+	margin-left: 20px;
 }
 
 .benutzer{
 	width: 30%;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: bold;
+	color: #f8f8f8;
+	display: table-cell;
 }
 
-li{
+.benutzerimg {
+	float: right;
+	margin-left: 20px;
+}
+
+.benutzertext {
+	line-height: 45px;
+	text-align: right;
+}
+
+ul {
 	display: inline;
-	padding: 0px;
-	margin-left: 5px;
+	margin: 0;
+	padding: 0;
 }
 
-ul{
-	padding: 0;
-	margin: 0;
+li {
+	display: inline;
 }
+
+

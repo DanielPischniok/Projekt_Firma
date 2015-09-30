@@ -2,7 +2,29 @@
 html,body {
 	height: 100%;
 	margin: 0px;
+	font-family: HelveticaNeue, Arial, sans-serif;
+	font-size: 14px;
+	color: #001B45;
 	}
+
+@fontface {
+	font-family: 'HelveticaNeue';
+	src: url('"showcase-web/src/main/webapp/resources/fonts/HelveticaNeue.dfont");
+}
+	
+h1 {
+	font-size: 18px;
+	font-style: normal;
+	font-weight: bold;
+	color: #001B45;
+}
+
+h2 {
+	font-size: 16px;
+	font-style: normal;
+	font-weight: bold;
+	color: #001B45;
+}	
 	
 a.menu {
 	text-decoration: none;
@@ -33,6 +55,24 @@ a.menu {
 	border-color: #001b45;
 	float: left;
 	margin-right: 20px;
+}
+
+fieldset {
+	margin: 20px;
+	width: 250px;
+	border: 1px solid #001B45;
+	border-radius: 5px;
+	padding: 20px;
+	text-decoration: none; 
+}
+
+legend {
+	background-color: #00368A;
+	border: 1px solid #001B45;
+	border-radius: 5px;
+	padding: 10px;
+	color: #F8F8F8
+	
 }
 
 
