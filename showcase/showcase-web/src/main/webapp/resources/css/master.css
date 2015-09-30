@@ -12,7 +12,7 @@ html,body {
 
 @fontface {
 	font-family: 'HelveticaNeue';
-	src: url('"showcase-web/src/main/webapp/resources/fonts/HelveticaNeue.dfont");
+	src: url("showcase-web/src/main/webapp/resources/fonts/HelveticaNeue.dfont");
 }
 
 /*----------------------------------------------------------------------------------------*/
