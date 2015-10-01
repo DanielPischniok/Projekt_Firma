@@ -17,6 +17,7 @@ li.logo {
 li.module {
 	width: auto;
 	margin-left: -12px;
+	padding-right: 15px;
 }
 
 li.benutzer {
