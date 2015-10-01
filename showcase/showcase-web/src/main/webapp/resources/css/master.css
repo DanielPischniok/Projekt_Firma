@@ -10,11 +10,6 @@ html,body {
 	margin: 0;
 	}
 
-@fontface {
-	font-family: 'HelveticaNeue';
-	src: url("showcase-web/src/main/webapp/resources/fonts/HelveticaNeue.dfont");
-}
-
 /*----------------------------------------------------------------------------------------*/
 
 /* DIV Layer */
@@ -22,7 +17,7 @@ html,body {
 #menue {
 	display: block;
 	background-color: #00368A;
-	height: 25px;
+	height: 30px;
 	width: 100%;
 	margin: 0;
 	padding: 0;
@@ -80,7 +75,7 @@ fieldset {
 	border: 1px solid #001B45;
 	border-radius: 5px;
 	padding: 20px;
-	text-decoration: none; 
+	text-decoration: none;
 }
 
 legend {
@@ -88,11 +83,11 @@ legend {
 	border: 1px solid #001B45;
 	border-radius: 5px;
 	padding: 10px;
-	color: #F8F8F8
+	color: #F8F8F8;
 	
 }
 
-input.m_such {
+input.m_text {
 	font-size: 95%;
 	border-radius:5px;
 	border-width: 1px;
@@ -100,11 +95,24 @@ input.m_such {
 	background-color: #F8F8F8;
 }
 
+input.m_submit_button {
+	color: #F8F8F8;
+	font-size: 95%;
+	border-radius:5px;
+	border-width: 1px;
+	border-color: #001b45;
+	background-color: #00368A;
+}
+
+input.m_submit_button:HOVER {
+	box-shadow: 0 8px 5px -6px #F8F8F8 inset;
+}
+
 /*----------------------------------------------------------------------------------------*/
 
 /*IMG Regel*/
 
-img.menue {
+img.icon {
 	padding: 0px;
 	margin: 0px;
 	display: inline;
@@ -117,6 +125,7 @@ img.menue {
 /*HYPERLINK Regel*/
 
 a.menue {
+	display: block;
 	color: #F8F8F8;
 	margin-right: 20px;
 	padding-left: 8px;
@@ -127,11 +136,7 @@ a.menue {
 }
 
 a.menue:HOVER {
-	background-color: #45669B;
-}
-
-a.menue:ACTIVE {
-	background-color: transparent;
+	box-shadow: 0 12px 5px -6px #F8F8F8 inset;
 }
 
 /*----------------------------------------------------------------------------------------*/
@@ -180,4 +185,16 @@ h5 {
 	font-weight: bold;
 	display: inline; 
 	padding-right: 20px;
+}
+
+/*----------------------------------------------------------------------------------------*/
+
+/*MESSAGES Regel */
+
+.error {
+	display: inline-block;
+	color: #156EFA; 
+	text-decoration: underline; 
+	font-weight: bold;
+	margin-left: -40px; 
 }

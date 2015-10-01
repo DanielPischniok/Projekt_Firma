@@ -10,15 +10,15 @@
 			<fieldset>
 			<legend>Login</legend>
 				<h:form>
-					<h:messages errorStyle="color: red; text-decoration: underline;" />
+					<h:messages errorClass="error"/><br/>
 					<h:panelGrid columns="2">
 						<h:outputLabel value="Username: " />
-						<h:inputText value="#{loginBean.username}" styleClass="m_such"/>
+						<h:inputText value="#{loginBean.username}" styleClass="m_text"/>
 
 						<h:outputLabel value="Password: " />
-						<h:inputSecret value="#{loginBean.password}" styleClass="m_such" />
+						<h:inputSecret value="#{loginBean.password}" styleClass="m_text" />
 					</h:panelGrid>
-					<h:commandButton action="#{loginBean.login()}" value="Login" >
+					<h:commandButton action="#{loginBean.login()}" value="Login" styleClass="m_submit_button" >
 						<f:param name="redirect" value="#{requestScope['javax.servlet.forward.request_uri']}" />
 					</h:commandButton>
 				</h:form>

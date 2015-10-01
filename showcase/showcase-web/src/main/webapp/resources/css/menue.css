@@ -4,26 +4,22 @@ ui {
 }
 
 li {
-	display: inline-block;
-	margin-left: -18px;
+	display: table-cell;
+	float: left;
+	line-height: 30px;
 }
 
 li.logo {
 	width: 20%;
-	padding-left: 0px;
+	margin-left: -20px;
 }
 
 li.module {
-	width: 53%;
+	width: auto;
+	margin-left: -12px;
 }
 
 li.benutzer {
-	width: 12%;
-	display:inline;
-	
-}
-li.suche {
-	width: 15%;
-	display: inline;
-	padding: 0;
+	width: 30%;
+	float: right;	
 }
