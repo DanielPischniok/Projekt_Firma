@@ -12,15 +12,17 @@
  <div id="menue">
  		<ui:include src="/WEB-INF/templates/menu.xhtml" />
   </div>
-  
- <div id="submenue"></div>
- 
- <div id="content">
- 	<ui:insert name="content"></ui:insert>
+<div id="wrapper">
+ <div id="submenue">
+ <ui:insert name="content"></ui:insert>
  </div>
  
+    <div id="content">
+ 	<ui:insert name="content"></ui:insert>
+ </div>
+ </div>
  <div id="footer">
- 	<ui:insert src="/WEB-INF/templates/footer.xhtml"></ui:insert>
+ 	<ui:include src="/WEB-INF/templates/footer.xhtml" />
  </div>
 </h:body>
 </html>

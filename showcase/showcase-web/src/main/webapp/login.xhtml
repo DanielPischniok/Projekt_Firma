@@ -3,22 +3,32 @@
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html">
-
+      
+      
 	<ui:composition template="/WEB-INF/templates/mastertemplatewosub.xhtml">
 	<ui:define name="content">
+<style type="text/css">
+   ul {
+   filter: blur(2.5px);
+   -webkit-filter: blur(2.5px);
+   -moz-filter: blur(2.5px);
+   -ms-filter: blur(2.5px);
+   -o-filter: blur(2.5px;)
+   }
+   </style>
 		<div id="logindiv">
 			<fieldset>
 			<legend>Anmelden</legend>
 				<h:form>
 					<h:messages errorClass="error"/><br/>
 					<h:panelGrid columns="2">
-						<h:outputLabel value="Username: " />
-						<h:inputText value="#{loginBean.username}" styleClass="m_text"/>
+						<h:outputLabel value="Benutzer: " />
+						<h:inputText value="#{loginBean.username}" styleClass="i_text"/>
 
-						<h:outputLabel value="Password: " />
-						<h:inputSecret value="#{loginBean.password}" styleClass="m_text" />
+						<h:outputLabel value="Passwort: " />
+						<h:inputSecret value="#{loginBean.password}" styleClass="i_text" />
 					</h:panelGrid>
-					<h:commandButton action="#{loginBean.login()}" value="Login" styleClass="m_submit_button" >
+					<h:commandButton action="#{loginBean.login()}" value="Login" styleClass="i_submit_button" >
 						<f:param name="redirect" value="#{requestScope['javax.servlet.forward.request_uri']}" />
 					</h:commandButton>
 				</h:form>

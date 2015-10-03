@@ -2,6 +2,7 @@
 
 html,body {
 	height: 100%;
+	max-width: 100%
 	margin: 0px;
 	font-family: HelveticaNeue, Arial, sans-serif;
 	font-size: 14px;
@@ -17,56 +18,54 @@ html,body {
 #menue {
 	display: block;
 	background-color: #00368A;
-	height: 30px;
 	width: 100%;
-	min-width: 1000px;
 	margin: 0;
 	padding: 0;
 	box-shadow: 0px 5px 2px #001b45;
 	layout: block;
 	margin-top: -15px;
-	white-space: nowrap;
-	z-index: 1;
+}
+
+#wrapper {
+	width: 100%;
 }
 
 #submenue {
-	position: absolute;
-	display: block;
-	background-color: none;
-	height: 95%;
-	width: 20%;
-	min-width:  200px;
-	border-right: 1px;
-	border-right-style: solid;
-	border-color: #001b45;
+	top: 30px;
+	height: 100%;
+	width: 20.5em;
+	border-right: 1px solid #001b45;
 	float: left;
-	margin-right: 20px;
-	z-index: 0;
-}
-
+	}
+	
 #content {
-	position: absolute;
 	left: 20%;
-	display: block;
-	margin-left: 10px;
-	height: 95%;
+	top: 30px;
 	width: 80%;
-	min-width: 800px;
-	float: left;
-	z-index: 1;
-}
+	height: 100%;
+}	
+
 
 #footer {
 	position: absolute;
 	display: block;
 	bottom: 0;
 	width: 100%;
-	min-width: 1000px;
-	height: 30px;
+	height: auto;
 	background-color: #00368A; 
 }
 
 #logindiv {
+	position: absolute;
+	width: 350px;
+	height: 250px;
+	top: 45%;
+	left: 50%;
+	margin-top: -125px;
+	margin-left: -175px;
+}
+
+#startdiv {
 	position: absolute;
 	width: 250px;
 	height: 250px;
@@ -81,7 +80,7 @@ html,body {
 
 fieldset {
 	margin: 20px;
-	width: 250px;
+	width: auto;
 	border: 1px solid #001B45;
 	border-radius: 5px;
 	padding: 20px;
@@ -99,7 +98,7 @@ legend {
 	
 }
 
-input.m_text {
+input.i_text {
 	font-size: 95%;
 	border-radius:5px;
 	border-width: 1px;
@@ -107,7 +106,7 @@ input.m_text {
 	background-color: #F8F8F8;
 }
 
-input.m_submit_button {
+input.i_submit_button {
 	color: #F8F8F8;
 	font-size: 95%;
 	border-radius:5px;
@@ -116,7 +115,7 @@ input.m_submit_button {
 	background-color: #00368A;
 }
 
-input.m_submit_button:HOVER {
+input.i_submit_button:HOVER {
 	box-shadow: 0 8px 5px -6px #F8F8F8 inset;
 }
 
@@ -195,6 +194,16 @@ h5 {
 	color: #F8F8F8;
 	font-style: none;
 	font-weight: bold;
+	display: inline; 
+	padding-right: 20px;
+}
+
+h6 {
+	font-family: HelveticaNeue, Arial, sans-serif;
+	font-size: 12px;
+	color: #F8F8F8;
+	font-style: none;
+	font-weight:normal	;
 	display: inline; 
 	padding-right: 20px;
 }
