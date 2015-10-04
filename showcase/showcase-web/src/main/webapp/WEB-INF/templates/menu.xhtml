@@ -9,21 +9,23 @@
    <h:outputStylesheet name="css/menue_footer.css" />  
 </h:head>
 <h:body>
-
+<h:form>
 <ul>
 	<li class="logo">
 	<h4>PROJEKT FIRMA</h4>
 	</li>
-	<li class="module"><a href="#" class="menue">Startcenter</a></li> 
+	<li class="module"><h:link outcome="/restricted/start.jsf" styleClass="menue" value="Startcenter" /></li> 
 	<li class="module"><a href="#" class="menue">Projekte</a></li> 
 	<li class="module"><a href="#" class="menue">Finanzen</a></li> 
-	<li class="module"><a href="#" class="menue">Administration</a></li>
+	<li class="module"><h:link outcome="/restricted/admin/administration.jsf" styleClass="menue" value="Administration" /></li>
 	<li class="benutzer">
 	<h5>#{loginBean.signedUser}</h5>
 	<input type="text" class="i_text" />
 	<input type="submit" class="i_submit_button" value="Suchen" />
+	<h:commandButton styleClass="i_submit_button" action="#{loginBean.logout()}" value="logout" rendered="#{not empty loginBean.signedUser}" />
 	</li>
 </ul>
+</h:form>
 
 </h:body>
 

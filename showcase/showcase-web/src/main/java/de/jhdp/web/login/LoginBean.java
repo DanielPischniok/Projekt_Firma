@@ -10,6 +10,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 @Named
 @ViewScoped
@@ -46,6 +47,20 @@ public class LoginBean implements Serializable{
 		}
 		
 		return "";
+	}
+	
+	public String logout(){
+		HttpServletRequest request = 
+				(HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
+		HttpSession session = 
+				(HttpSession) FacesContext.getCurrentInstance().getExternalContext().getSession(true);
+		try {
+			session.invalidate();
+			request.logout();
+		} catch (ServletException e) {
+		}
+		
+		return "/restricted/start.jsf?faces-redirect=true";
 	}
 	
 	private FacesContext getFacesContext(){
