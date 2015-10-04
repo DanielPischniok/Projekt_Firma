@@ -27,5 +27,7 @@ li.benutzer {
 }
 
 li.footer{
-	
+	line-height: 0px;
+	text-align: center;
+	width: 100%;
 }
