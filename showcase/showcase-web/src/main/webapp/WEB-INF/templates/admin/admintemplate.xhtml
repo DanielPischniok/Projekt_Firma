@@ -3,12 +3,13 @@
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html">
-	
-	<ui:composition template="/WEB-INF/templates/admin/admintemplate.xhtml">
+
+	<ui:composition template="/WEB-INF/templates/mastertemplate.xhtml">
+			<ui:define name="submenue">
+				<ui:include src="/restricted/admin/admin-menu.xhtml" />
+			</ui:define>
 			<ui:define name="content">
-				<h:form>
-					<h1>Administration</h1>
-				</h:form>
+				<ui:insert name="admincontent"></ui:insert>
 			</ui:define>
 	</ui:composition>
 
