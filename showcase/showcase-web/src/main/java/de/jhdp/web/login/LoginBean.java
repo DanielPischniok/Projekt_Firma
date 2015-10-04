@@ -43,6 +43,17 @@ public class LoginBean implements Serializable{
 		
 		return "";
 	}
+	
+	private FacesContext getFacesContext(){
+		return FacesContext.getCurrentInstance();
+	}
+	
+	public String getSignedUser(){
+		if(getFacesContext().getExternalContext().getUserPrincipal() != null){
+			return getFacesContext().getExternalContext().getUserPrincipal().getName();
+		}
+		return "";
+	}
 
 	public String getUsername() {
 		return username;
