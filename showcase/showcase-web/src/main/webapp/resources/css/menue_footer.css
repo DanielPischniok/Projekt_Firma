@@ -18,9 +18,10 @@ li.logo{
 }
 
 li.modul{
-	width: 20em;
+	width: 8%;
 }
 
 li.benutzer {
-	
+	float: right;
+	padding-right: 1%;
 }
