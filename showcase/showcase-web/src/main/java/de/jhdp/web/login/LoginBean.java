@@ -34,16 +34,18 @@ public class LoginBean implements Serializable{
 		
 		try {
 			request.login(username, password);
-			jsfUtils.addGlobalFacesMessage(FacesMessage.SEVERITY_INFO, "Login successfull");
+			jsfUtils.addGlobalFacesMessageBundle(FacesMessage.SEVERITY_INFO, "login_success");
 			if(originalURI != null && originalURI.length() > 0){
 				FacesContext.getCurrentInstance().getExternalContext().redirect(originalURI);
+			}else{
+				return "/restricted/start.jsf?faces-redirect=true";
 			}
 		} catch (ServletException | IOException e) {
-			jsfUtils.addGlobalFacesMessage(FacesMessage.SEVERITY_ERROR, "Login failed");
+			jsfUtils.addGlobalFacesMessageBundle(FacesMessage.SEVERITY_ERROR, "login_error");
 			e.printStackTrace();
 		}
 		
-		return "/restricted/start.jsf?faces-redirect=true";
+		return "";
 	}
 	
 	private FacesContext getFacesContext(){
