@@ -2,10 +2,21 @@
 ul {
 	display: table;
 	list-style: none;
+	padding: 0;
+	width: 100%;
 }
 
 li {
 	display: table-cell;
 	float: left;
 	line-height: 30px;
+}
+
+li.logo{
+	width: 19%;
+	padding-left: 1%;
+}
+
+li.modul{
+	width: 20em;
 }
