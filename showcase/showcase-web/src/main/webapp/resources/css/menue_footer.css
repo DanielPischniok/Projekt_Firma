@@ -1,33 +1,11 @@
+
 ul {
 	display: table;
-	width: 100%;		
+	list-style: none;
 }
 
 li {
 	display: table-cell;
 	float: left;
-}
-
-li.logo {
-	width: 20em;
-	margin-left: -20px;
 	line-height: 30px;
-}
-
-li.module {
-	width: auto;
-	margin-left: -12px;
-	line-height: 30px;
-}
-
-li.benutzer {
-	width: 30em;
-	float: right;
-	line-height: 30px;	
-}
-
-li.footer {
-	width: 100%;
-	text-align: center;
-	margin-top: -5px; 
 }
