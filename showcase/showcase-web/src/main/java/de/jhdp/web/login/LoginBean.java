@@ -35,13 +35,15 @@ public class LoginBean implements Serializable{
 		try {
 			request.login(username, password);
 			jsfUtils.addGlobalFacesMessage(FacesMessage.SEVERITY_INFO, "Login successfull");
-			FacesContext.getCurrentInstance().getExternalContext().redirect(originalURI);
+			if(originalURI != null && originalURI.length() > 0){
+				FacesContext.getCurrentInstance().getExternalContext().redirect(originalURI);
+			}
 		} catch (ServletException | IOException e) {
 			jsfUtils.addGlobalFacesMessage(FacesMessage.SEVERITY_ERROR, "Login failed");
 			e.printStackTrace();
 		}
 		
-		return "";
+		return "/restricted/start.jsf?faces-redirect=true";
 	}
 	
 	private FacesContext getFacesContext(){
