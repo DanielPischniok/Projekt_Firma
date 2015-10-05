@@ -74,8 +74,8 @@ html,body {
 
 #startdiv {
 	position: absolute;
-	height: 500px;
-	width: 700px;
+	height: 50%;
+	width: 50%;
 	top: 50%;
 	left: 50%;
 	margin-top: -250px;
