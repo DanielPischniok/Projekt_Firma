@@ -49,9 +49,8 @@ html,body {
 	
 #content {
 	left: 20%;
-	top: 30px;
-	width: 80%;
 	height: 100%;
+	padding-left: 1%;
 }	
 
 
@@ -75,12 +74,12 @@ html,body {
 
 #startdiv {
 	position: absolute;
-	width: 250px;
-	height: 250px;
-	top: 25%;
-	left: 25%;
-	margin-top: -75px;
-	margin-left: -75px;
+	height: 500px;
+	width: 700px;
+	top: 50%;
+	left: 50%;
+	margin-top: -250px;
+	margin-left: -375px;
 }
 /*----------------------------------------------------------------------------------------*/
 
@@ -125,18 +124,6 @@ input.i_submit_button {
 
 input.i_submit_button:HOVER {
 	box-shadow: 0 8px 5px -6px #F8F8F8 inset;
-}
-
-/*----------------------------------------------------------------------------------------*/
-
-/*IMG Regel*/
-
-img.icon {
-	padding: 0px;
-	margin: 0px;
-	display: inline;
-	padding-right: 20px;
-	float: right;
 }
 
 /*----------------------------------------------------------------------------------------*/
@@ -230,15 +217,15 @@ h6 {
 }
 
 .message{
-	filter: unset; 
+	filter: unset;
 	-webkit-filter: blur(0);
 	-moz-filter: unset;
 	-ms-filter: unset;
-	-o-filter: unset;
+	-o-filter: unset; 
 }
 
 i.icon-user{
 	font-family: 'Fontello';
 	font-style: normal;
-	color: white;
+	color: #F8F8F8;
 }
