@@ -41,16 +41,18 @@ html,body {
 
 #submenue {
 	top: 30px;
-	height: 100%;
 	width: 20%;
+	height: 100%;
 	border-right: 1px solid #001b45;
 	float: left;
+	display: table;
 	}
 	
 #content {
 	left: 20%;
 	height: 100%;
 	padding-left: 1%;
+	display: table;
 }	
 
 
@@ -81,6 +83,7 @@ html,body {
 	margin-top: -250px;
 	margin-left: -375px;
 }
+
 /*----------------------------------------------------------------------------------------*/
 
 /*FORM Regel */
