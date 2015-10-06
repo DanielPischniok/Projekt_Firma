@@ -1,0 +1,17 @@
+/* Submenue */
+
+a.menuepkt{
+	display: block;
+	background-color: #45669B;
+	color: #F8F8F8;
+	width: 19em;
+	height: 2em;
+	text-decoration: none;
+	text-align: left;
+	line-height: 2em;
+	padding-left: 1em;
+}
+
+a.menuepkt:Hover {
+	background-color: #156EFA;
+}

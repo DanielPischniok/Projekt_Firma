@@ -5,10 +5,11 @@
 	xmlns:h="http://java.sun.com/jsf/html">
 
 <ui:composition>
+<h:outputStylesheet name="css/submenue.css" />
 	<h:form>
 		<h:panelGrid>
-			<h:link outcome="/restricted/admin/administration.jsf" value="#{messages.admin_overview}" />
-			<h:link outcome="/restricted/admin/rr/overview.jsf" value="#{messages.admin_roles_overview}"></h:link>
+			<h:link outcome="/restricted/admin/administration.jsf" value="#{messages.admin_overview}" styleClass="menuepkt"></h:link>
+			<h:link outcome="/restricted/admin/rr/overview.jsf" value="#{messages.admin_roles_overview}" styleClass="menuepkt"></h:link>
 		</h:panelGrid>
 	</h:form>
 </ui:composition>
