@@ -1,17 +1,32 @@
 /* Submenue */
 
-a.menuepkt{
-	display: block;
-	background-color: #45669B;
+a {
 	color: #F8F8F8;
-	width: 19em;
+	text-decoration: none;
 	height: 2em;
+}
+
+.text{
+	display: block;
+	width: 17.5em;
 	text-decoration: none;
 	text-align: left;
 	line-height: 2em;
 	padding-left: 1em;
 }
+.icon{
+	color: #F8F8F8;
+	width: 1.5em;
+	height: 2em;
+	text-decoration: none;
+	text-align: center;
+	line-height: 2em;
+}
 
-a.menuepkt:Hover {
+tr.sub{
+	background-color: #45669B;
+}
+
+tr.sub:Hover {
 	background-color: #156EFA;
 }

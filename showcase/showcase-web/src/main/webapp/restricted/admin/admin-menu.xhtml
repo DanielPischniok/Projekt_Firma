@@ -7,10 +7,19 @@
 <ui:composition>
 <h:outputStylesheet name="css/submenue.css" />
 	<h:form>
-		<h:panelGrid>
-			<h:link outcome="/restricted/admin/administration.jsf" value="#{messages.admin_overview}" styleClass="menuepkt"></h:link>
-			<h:link outcome="/restricted/admin/rr/overview.jsf" value="#{messages.admin_roles_overview}" styleClass="menuepkt"></h:link>
-		</h:panelGrid>
+		<table class="noborder">
+		<h:link outcome="/restricted/admin/administration.jsf">  
+		<tr class="sub">
+		<td class="text">!!!!! value="#{messages.admin_overview}"> !!!!!!</td>
+		<td class="icon"><i class="icon-user">&#xe806;</i></td>
+		</tr>
+		</h:link>
+		<tr class="sub">
+		<td><h:link outcome="/restricted/admin/rr/overview.jsf" value="#{messages.admin_roles_overview}"></h:link></td>
+		<td class="icon"><i class="icon-user">&#xe806;</i></td>
+		</tr>
+		</table>
+
 	</h:form>
 </ui:composition>
 
