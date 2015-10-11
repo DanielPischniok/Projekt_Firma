@@ -6,27 +6,30 @@ a {
 	height: 2em;
 }
 
-.text{
+#link{
 	display: block;
-	width: 17.5em;
-	text-decoration: none;
-	text-align: left;
+	background-color: #45669B; 
+	width: 19.5em;
+	height: 2em;
 	line-height: 2em;
 	padding-left: 1em;
+	margin-bottom: 0.1em;
+}
+
+.text{
+	display: inline;
+	color: #F8F8F8;
+	text-align: left;
 }
 .icon{
+	display: inline;
 	color: #F8F8F8;
-	width: 1.5em;
-	height: 2em;
-	text-decoration: none;
-	text-align: center;
-	line-height: 2em;
+	float: right;
+	padding-right: 1em;
 }
 
-tr.sub{
-	background-color: #45669B;
-}
 
-tr.sub:Hover {
+#link:Hover {
 	background-color: #156EFA;
 }
+
