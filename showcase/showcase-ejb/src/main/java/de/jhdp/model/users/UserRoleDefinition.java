@@ -1,8 +1,10 @@
 package de.jhdp.model.users;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -23,8 +25,12 @@ public class UserRoleDefinition implements Serializable{
 	
 	private String roleName;
 	
-	@OneToMany(fetch=FetchType.EAGER)
+	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.REMOVE, mappedBy="role")
 	private List<UserRoleAttributeDefinition> attributes;
+	
+	public UserRoleDefinition(){
+		attributes = new ArrayList<UserRoleAttributeDefinition>();
+	}
 
 	public Long getId() {
 		return id;

@@ -1,15 +1,19 @@
 package de.jhdp.web.admin.rr;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
+import javax.faces.application.FacesMessage;
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
+import de.jhdp.model.users.UserRoleAttributeDefinition;
 import de.jhdp.model.users.UserRoleDefinition;
 import de.jhdp.service.RolesRightsDefinitionService;
+import de.jhdp.web.login.JSFUtilsBean;
 
 @Named("rrBean")
 @ViewScoped
@@ -20,7 +24,16 @@ public class RolesAndRightsDefinitionBean implements Serializable{
 	@Inject
 	private RolesRightsDefinitionService rrService;
 	
+	@Inject
+	private JSFUtilsBean jsfUtils;
+	
 	private List<UserRoleDefinition> definedRoles;
+	
+	private UserRoleDefinition currentRole;
+	
+	private UserRoleAttributeDefinition currentAttribute;
+	
+	private List<UserRoleAttributeDefinition> deletedAttributes;
 
 	public RolesAndRightsDefinitionBean() {
 	}
@@ -29,6 +42,68 @@ public class RolesAndRightsDefinitionBean implements Serializable{
 	public void init(){
 		definedRoles = rrService.getDefinedRoles();
 	}
+	
+	public String editUserRole(UserRoleDefinition role){
+		this.currentRole = role;
+		return "";
+	}
+	
+	public String createNewRole(){
+		this.currentRole = new UserRoleDefinition();
+		return "";
+	}
+	
+	public String saveCurrentRole(){
+		rrService.saveOrUpdate(currentRole, deletedAttributes);
+		currentRole = new UserRoleDefinition();
+		deletedAttributes = new ArrayList<>();
+		currentAttribute = new UserRoleAttributeDefinition();
+		this.init();
+		jsfUtils.addGlobalFacesMessageBundle(FacesMessage.SEVERITY_INFO, "message_save_success");
+		return "";
+	}
+	
+	public String deleteCurrentRoleDef(UserRoleDefinition role){
+		this.currentRole = new UserRoleDefinition();
+		rrService.deleteRoleDefinition(role);
+		this.init();
+		return "";
+	}
+	
+	public String createNewAttribute(){
+		this.currentAttribute = new UserRoleAttributeDefinition();
+		return "";
+	}
+	
+	public String saveCurrentAttribute(){
+		boolean unique = true;
+		for(UserRoleAttributeDefinition attr: currentRole.getAttributes()){
+			if(attr.getAttributeName().equalsIgnoreCase(currentAttribute.getAttributeName())){
+				unique = false;
+			}
+		}
+		if(unique){
+			currentRole.getAttributes().add(currentAttribute);
+			
+		}else{
+			jsfUtils.addGlobalFacesMessageBundle(FacesMessage.SEVERITY_ERROR, "attr_name_not_unique");
+		}
+		this.currentAttribute = new UserRoleAttributeDefinition();
+		return "";
+	}
+	
+	public void editCurrentAttribute(UserRoleAttributeDefinition attr){
+		this.currentAttribute = attr;
+	}
+	
+	public void deleteCurrentAttribute(UserRoleAttributeDefinition attr){
+		if(deletedAttributes == null){
+			deletedAttributes = new ArrayList<UserRoleAttributeDefinition>();
+		}
+		deletedAttributes.add(attr);
+		currentRole.getAttributes().remove(attr);
+		this.currentAttribute = new UserRoleAttributeDefinition();
+	}
 
 	public List<UserRoleDefinition> getDefinedRoles() {
 		return definedRoles;
@@ -36,6 +111,30 @@ public class RolesAndRightsDefinitionBean implements Serializable{
 
 	public void setDefinedRoles(List<UserRoleDefinition> definedRoles) {
 		this.definedRoles = definedRoles;
+	}
+
+	public UserRoleDefinition getCurrentRole() {
+		return currentRole;
+	}
+
+	public void setCurrentRole(UserRoleDefinition currentRole) {
+		this.currentRole = currentRole;
+	}
+
+	public UserRoleAttributeDefinition getCurrentAttribute() {
+		return currentAttribute;
+	}
+
+	public void setCurrentAttribute(UserRoleAttributeDefinition currentAttribute) {
+		this.currentAttribute = currentAttribute;
+	}
+
+	public List<UserRoleAttributeDefinition> getDeletedAttributes() {
+		return deletedAttributes;
+	}
+
+	public void setDeletedAttributes(List<UserRoleAttributeDefinition> deletedAttributes) {
+		this.deletedAttributes = deletedAttributes;
 	}
 	
 }

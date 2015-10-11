@@ -21,7 +21,7 @@ public class UserRoleAttributeDefinition implements Serializable{
 	private String attributeName;
 	
 	@ManyToOne
-	private UserRoleAttributeDefinition role;
+	private UserRoleDefinition role;
 
 	public Long getId() {
 		return id;
@@ -39,12 +39,12 @@ public class UserRoleAttributeDefinition implements Serializable{
 		this.attributeName = attributeName;
 	}
 
-	public UserRoleAttributeDefinition getRole() {
+	public UserRoleDefinition getRole() {
 		return role;
 	}
 
-	public void setRole(UserRoleAttributeDefinition role) {
+	public void setRole(UserRoleDefinition role) {
 		this.role = role;
 	}
-
+	
 }

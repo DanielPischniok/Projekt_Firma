@@ -9,8 +9,9 @@
 	<ui:define name="content">
 		<h1>Roles and Rights Administration</h1>
 		<p:accordionPanel>
-			<p:tab title="Rollendefinition">
-				<p:dataTable value="#{rrBean.definedRoles}" var="role" emptyMessage="Keine Rollen definiert">
+			<p:tab title="Rollendefinition" >
+				<p:commandButton action="#{rrBean.createNewRole()}" value="Rolle erstellen" oncomplete="PF('roledefinitionDialog').show();" />
+				<p:dataTable  value="#{rrBean.definedRoles}" var="role" emptyMessage="Keine Rollen definiert">
 					<p:column>
 						<f:facet name="header">
 							<h:outputText value="Rolle" />
@@ -21,11 +22,13 @@
 						<f:facet name="header">
 							<h:outputText value="Edit" />
 						</f:facet>
-						<h:commandButton action="test" value="Edit" />
+						<p:commandButton value="Edit" action="#{rrBean.editUserRole(role)}" oncomplete="PF('roledefinitionDialog').show();"  />
 					</p:column>
 				</p:dataTable>
 			</p:tab>
 		</p:accordionPanel>
+		<ui:include src="edit.xhtml" />
+		
 	</ui:define>
 </ui:composition>
 
