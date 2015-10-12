@@ -213,7 +213,7 @@ hr {
 	margin: 0px 0px 10px 0px;
 	width: 100%;
 	min-width: 50%;
-	color: #000000;
+	color: #001B45;
 }
 
 /*----------------------------------------------------------------------------------------*/
@@ -233,7 +233,7 @@ hr {
 	filter: unset;
 	-webkit-filter: blur(0);
 	-moz-filter: unset;
-	-ms-filter: unset;
+	-ms-filter: unset;	
 	-o-filter: unset; 
 }
 
