@@ -2,19 +2,25 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:h="http://java.sun.com/jsf/html">
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
 
 <ui:composition>
 <h:outputStylesheet name="css/submenue.css" />
 	<h:form>
-	<div id="link">
+	<!-- <div id="link">
 	<div class="text"><h:link outcome="/restricted/admin/administration.jsf" value="#{messages.admin_overview}"></h:link></div>
-	<div class="icon"><i class="icon-user">&#xe806;</i></div>
-	</div>
+	<div class="icon"><i class="icon-user">&#xe805;</i></div>
+	</div>-->
 	<div id="link">
 	<div class="text"><h:link outcome="/restricted/admin/rr/overview.jsf" value="#{messages.admin_roles_overview}"></h:link></div>
-	<div class="icon"><i class="icon-user">&#xe806;</i></div>
+	<div class="icon"><i class="icon-user">&#xe805;</i></div>
 	</div>
+	<p:accordionPanel style="color:red;">
+		<p:tab title="Section1" titleStyle="background-color:#156EFA" >
+			<h:link outcome="/restricted/admin/administration.jsf" value="Link"></h:link>
+		</p:tab>
+	</p:accordionPanel>
 
 	</h:form>
 </ui:composition>
