@@ -12,7 +12,7 @@
 		<p:accordionPanel>
 			<p:tab title="Rollendefinition" >
 				<p:commandButton action="#{rrBean.createNewRole()}" value="Rolle erstellen" oncomplete="PF('roledefinitionDialog').show();" styleClass="i_submit_button" />
-				<p:dataTable  value="#{rrBean.definedRoles}" var="role" emptyMessage="Keine Rollen definiert">
+				<h:dataTable  value="#{rrBean.definedRoles}" var="role" emptyMessage="Keine Rollen definiert" >
 					<p:column>
 						<f:facet name="header">
 							<h:outputText value="Rolle"/>
@@ -25,7 +25,7 @@
 						</f:facet>
 						<p:commandButton value="Edit" action="#{rrBean.editUserRole(role)}" oncomplete="PF('roledefinitionDialog').show();"  />
 					</p:column>
-				</p:dataTable>
+				</h:dataTable>
 			</p:tab>
 		</p:accordionPanel>
 		<ui:include src="edit.xhtml" />
