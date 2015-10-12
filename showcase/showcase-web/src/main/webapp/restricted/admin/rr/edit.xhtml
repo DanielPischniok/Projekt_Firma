@@ -3,57 +3,64 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:p="http://primefaces.org/ui">
+	xmlns:p="http://primefaces.org/ui" >
 
 <ui:composition>
-	<h:form>
+	<h:form id="rollenDefinitionForm">
 		<p:dialog modal="true" header="Rollendefinition"
 			onShow="PF('roledefinitionDialog').loadContents();"
 			id="roledefinitionDialog" widgetVar="roledefinitionDialog">
 			<h:messages escape="false" />
-			<h:panelGrid columns="2">
-				<h:outputLabel value="Name " />
-				<h:inputText value="#{rrBean.currentRole.roleName}" styleClass="i_text"/>
-			</h:panelGrid>
-			<h:panelGrid>
-				<h:outputLabel value="Attribute" />
-				<p:commandButton value="Neues Attribut anlegen"
-					actionListener="#{rrBean.createNewAttribute()}" update="@none"
-					ajax="true" process="@this"
-					onclick="PF('editCurrentAttribute').show();" styleClass="i_submit_button" />
-				<p:dataTable id="roleAttributes"
-					value="#{rrBean.currentRole.attributes}" var="attr"
-					paginator="false" emptyMessage="Keine Attribute definiert">
-					<p:column>
-						<f:facet name="header">
-							<h:outputText value="Name" />
-						</f:facet>
-						<h:outputText value="#{attr.attributeName}" />
-					</p:column>
-					<p:column>
-						<f:facet name="header">
-							<h:outputText value="Editieren" />
-						</f:facet>
-						<p:commandButton value="Edit"
-							actionListener="#{rrBean.editCurrentAttribute(attr)}"
-							onclick="PF('editCurrentAttribute').show();" styleClass="i_submit_button"/>
-					</p:column>
-					<p:column>
-						<f:facet name="header">
-							<h:outputText value="Löschen" />
-						</f:facet>
-						<p:commandButton value="Löschen" update="roleAttributes"
-							process="@this"
-							actionListener="#{rrBean.deleteCurrentAttribute(attr)}" styleClass="i_submit_button"/>
-					</p:column>
-				</p:dataTable>
-			</h:panelGrid>
-			<h:panelGrid columns="2">
-				<h:commandButton value="Schließen"
-					onclick="PF('roledefinitionDialog').hide();" immediate="true" styleClass="i_submit_button"/>
-				<h:commandButton value="Speichern"
-					action="#{rrBean.saveCurrentRole()}" styleClass="i_submit_button"/>
-			</h:panelGrid>
+			<h:panelGroup id="roleDefGroup">
+				<h:panelGrid columns="2">
+					<h:outputLabel value="Name " />
+					<h:inputText value="#{rrBean.currentRole.roleName}"
+						styleClass="i_text" />
+				</h:panelGrid>
+				<h:panelGrid>
+					<h:outputLabel value="Attribute" />
+					<p:commandButton value="Neues Attribut anlegen"
+						actionListener="#{rrBean.createNewAttribute()}" update="@none"
+						ajax="true" process="@this"
+						onclick="PF('editCurrentAttribute').show();"
+						styleClass="i_submit_button" />
+					<h:dataTable id="roleAttributes"
+						value="#{rrBean.currentRole.attributes}" var="attr"
+						emptyMessage="Keine Attribute definiert">
+						<p:column>
+							<f:facet name="header">
+								<h:outputText value="Name" />
+							</f:facet>
+							<h:outputText value="#{attr.attributeName}" />
+						</p:column>
+						<p:column>
+							<f:facet name="header">
+								<h:outputText value="Editieren" />
+							</f:facet>
+							<p:commandButton value="Edit"
+								actionListener="#{rrBean.editCurrentAttribute(attr)}"
+								onclick="PF('editCurrentAttribute').show();"
+								styleClass="i_submit_button" />
+						</p:column>
+						<p:column>
+							<f:facet name="header">
+								<h:outputText value="Löschen" />
+							</f:facet>
+							<p:commandButton value="Löschen" update="roleAttributes"
+								process="@this"
+								actionListener="#{rrBean.deleteCurrentAttribute(attr)}"
+								styleClass="i_submit_button" />
+						</p:column>
+					</h:dataTable>
+				</h:panelGrid>
+				<h:panelGrid columns="2">
+					<h:commandButton value="Schließen"
+						onclick="PF('roledefinitionDialog').hide();" immediate="true"
+						styleClass="i_submit_button" />
+					<h:commandButton value="Speichern"
+						action="#{rrBean.saveCurrentRole()}" styleClass="i_submit_button" />
+				</h:panelGrid>
+			</h:panelGroup>
 		</p:dialog>
 		</h:form>
 <h:form>
@@ -66,10 +73,10 @@
 			<h:panelGrid columns="2">
 				<p:commandButton value="Abbrechen"
 					onclick="PF('editCurrentAttribute').hide();" immediate="true" styleClass="i_submit_button"/>
-				<p:commandButton value="Speichern"
-					actionListener="#{rrBean.saveCurrentAttribute()}"
-					update="roleAttributes"
-					oncomplete="PF('editCurrentAttribute').hide();" styleClass="i_submit_button"/>
+				<p:commandButton value="Speichern" styleClass="i_submit_button"
+							actionListener="#{rrBean.saveCurrentAttribute()}"
+							oncomplete="PF('editCurrentAttribute').hide();"
+							update="rollenDefinitionForm:roleDefGroup"/>
 			</h:panelGrid>
 		</p:dialog>
 

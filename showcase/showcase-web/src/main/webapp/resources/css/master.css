@@ -242,3 +242,14 @@ i.icon-user{
 	font-style: normal;
 	color: #F8F8F8;
 }
+
+span.ui-growl-image:before{
+	font-family: 'Fontello' !important;
+	font-size: 50px;
+	content: '\e808';
+	background: none;
+}
+
+span.ui-growl-image-info{
+	background: none;
+}
