@@ -67,6 +67,7 @@ public class RolesAndRightsDefinitionBean implements Serializable{
 		this.currentRole = new UserRoleDefinition();
 		rrService.deleteRoleDefinition(role);
 		this.init();
+		jsfUtils.addGlobalFacesMessageBundle(FacesMessage.SEVERITY_INFO, "message_delete_success");
 		return "";
 	}
 	
@@ -103,6 +104,7 @@ public class RolesAndRightsDefinitionBean implements Serializable{
 		deletedAttributes.add(attr);
 		currentRole.getAttributes().remove(attr);
 		this.currentAttribute = new UserRoleAttributeDefinition();
+		init();
 	}
 
 	public List<UserRoleDefinition> getDefinedRoles() {

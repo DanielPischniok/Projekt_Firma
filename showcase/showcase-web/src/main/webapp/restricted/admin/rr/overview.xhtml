@@ -9,8 +9,8 @@
 	<ui:define name="content">
 		<h1>Roles and Rights Administration</h1>
 		<hr />
-		<p:accordionPanel>
-			<p:tab title="Rollendefinition" >
+			<h2>Rollendefinition</h2>
+			<h:form id="rolesAndRightsForm">
 				<p:commandButton action="#{rrBean.createNewRole()}" value="Rolle erstellen" oncomplete="PF('roledefinitionDialog').show();" styleClass="i_submit_button" />
 				<h:dataTable  
 						value="#{rrBean.definedRoles}" var="role" emptyMessage="Keine Rollen definiert" >
@@ -30,11 +30,10 @@
 						<f:facet name="header">
 							<h:outputText value="Löschen" />
 						</f:facet>
-						<p:commandButton value="Löschen" ajax="true" update="@all" action="#{rrBean.deleteCurrentAttribute(role)}"  />
+						<p:commandButton value="Löschen" ajax="true" update="rolesAndRightsForm globaleMessages" actionListener="#{rrBean.deleteCurrentRoleDef(role)}" onclick="return confirm('Sind Sie sicher?');" />
 					</p:column>
 				</h:dataTable>
-			</p:tab>
-		</p:accordionPanel>
+				</h:form>
 		<ui:include src="edit.xhtml" />
 		
 	</ui:define>

@@ -51,7 +51,11 @@ public class RolesRightsDefinitionService {
     }
     
     public void deleteRoleDefinition(UserRoleDefinition role){
-    	em.remove(role);
+    	UserRoleDefinition entityRole = em.merge(role);
+    	for(UserRoleAttributeDefinition att: entityRole.getAttributes()){
+    		em.remove(att);
+    	}
+    	em.remove(entityRole);
     }
 
 }

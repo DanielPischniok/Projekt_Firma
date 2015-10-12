@@ -245,7 +245,7 @@ i.icon-user{
 
 span.ui-growl-image:before{
 	font-family: 'Fontello' !important;
-	font-size: 50px;
+	font-size: 30px;
 	content: '\e808';
 	background: none;
 }
