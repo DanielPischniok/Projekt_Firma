@@ -6,13 +6,12 @@ a {
 	height: 2em;
 }
 
-#link{
-	display: block;
+.link{
 	background-color: #45669B; 
-	width: 98%;
-	height: 2em;
-	line-height: 2em;
-	padding-left: 2%;
+	color: #F8F8F8;
+	width: 87%;
+	height: 1em;
+	line-height: 1em;
 	margin-bottom: 1%;
 }
 
@@ -22,7 +21,7 @@ a {
 	text-align: left;
 }
 
-#link:Hover {
+.link:Hover {
 	background-color: #156EFA;
 }
 

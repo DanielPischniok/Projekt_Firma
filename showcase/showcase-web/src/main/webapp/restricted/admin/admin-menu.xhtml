@@ -12,12 +12,12 @@
 	<div class="text"><h:link outcome="/restricted/admin/administration.jsf" value="#{messages.admin_overview}"></h:link></div>
 	<div class="icon"><i class="icon-user">&#xe805;</i></div>
 	</div>-->
-	<div id="link">
+	<!--  <div id="link">
 	<div class="text"><h:link outcome="/restricted/admin/rr/overview.jsf" value="#{messages.admin_roles_overview}"></h:link></div>
 	<div class="icon"><i class="icon-user">&#xe805;</i></div>
-	</div>
-	<p:accordionPanel style="color:red;">
-		<p:tab title="Section1" titleStyle="background-color:#156EFA" >
+	</div>-->
+	<p:accordionPanel>
+		<p:tab title="#{messages.admin_roles_overview}" titleStyleClass="link" >
 			<h:link outcome="/restricted/admin/administration.jsf" value="Link"></h:link>
 		</p:tab>
 	</p:accordionPanel>
