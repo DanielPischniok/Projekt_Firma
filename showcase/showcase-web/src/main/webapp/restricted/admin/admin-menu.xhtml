@@ -7,37 +7,27 @@
 
 <ui:composition>
 <h:outputStylesheet name="css/submenue.css" />
-<article class="accordion">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+<script type="text/javascript">
 
-	<section id="acc1">
-		<h2><a href="#acc1">Title One</a></h2>
-		<p>This content appears on page 1.</p>
-	</section>
-	
-	<section id="acc2">
-		<h2><a href="#acc2">Title Two</a></h2>
-		<p>This content appears on page 2.</p>
-	</section>
-	
-	<section id="acc3">
-		<h2><a href="#acc3">Title Three</a></h2>
-		<p>This content appears on page 3.</p>
-	</section>
-	
-	<section id="acc4">
-		<h2><a href="#acc4">Title Four</a></h2>
-		<p>This content appears on page 4.</p>
-	</section>
-	
-	<section id="acc5">
-		<h2><a href="#acc5">Title Five</a></h2>
-		<p>This content appears on page 5.</p>
-	</section>
+$(document).ready(function(){
+	$("dt").click(function(){  
+		$(this).next("dd").slideToggle("fast");  
+		$(this).children("a").toggleClass("closed open"); 
+	});
+});
 
-</article>
-
+</script>
+<dl>
+<dt class="link"><a href="#" onclick="window.location.href='#{request.contextPath}/restricted/admin/rr/overview.jsf'">#{messages.admin_roles_overview}</a></dt>
+<dd class="text">TEST</dd>
+<dt class="link"><a href="#">Details</a></dt>
+<dd class="text">TEST</dd>
+<dt class="link"><a href="#">Details</a></dt>
+<dd class="text">TEST</dd>
+</dl>
 </ui:composition>
-
+	
 
 </html>
 

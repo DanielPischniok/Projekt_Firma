@@ -1,79 +1,39 @@
 /* Submenue */
-/*
+
 a {
 	color: #F8F8F8;
 	text-decoration: none;
 	height: 2em;
+	display: block;
 }
 
 .link{
 	background-color: #45669B; 
 	color: #F8F8F8;
-	width: 87%;
-	height: 1em;
-	line-height: 1em;
+	width: 98%;
+	height: 2em;
+	line-height: 2em;
 	margin-bottom: 1%;
+	padding-left: 2%;
 }
 
 .text{
-	display: inline;
-	color: #F8F8F8;
+	color: #001B45;
 	text-align: left;
+	border-bottom: 1px solid #001B45;
+	margin-bottom: 2%;
+	padding: 2% 0% 4% 4%;
 }
 
 .link:Hover {
 	background-color: #156EFA;
 }
-*/
 
-article.accordion
-{
-	display: block;
-	width: 20em;
-	padding-left: 0;
-	margin: 0;
-	background-color: none;
-
+dl {
+	margin-top: 0;
 }
 
-article.accordion section
-{
-	display: block;
-	width: 20em;
-	height: 2em;
-	padding-left: 1%;
-	margin: 1%;
-	color: #001B45;
-	background-color: #45669B;
-	overflow: hidden;
-	border-radius: 0;
-}
-
-article.accordion section h2
-{
-	font-weight: normal;
-	width: 100%;
-	line-height: 2em;
-	padding: 0;
-	margin: 0;
-	color: #F8F8F8;
-}
-
-article.accordion section h2 a
-{
-	display: block;
-	width: 100%;
-	line-height: 2em;
-	text-decoration: none;
-	color: #F8F8F8;
-	background-color: #45669B;
-}
-
-article.accordion section:target
-{
-	height: 100%;
-	background-color: #F8F8F8;
-	border-bottom: 1px Solid #001b45;
-	margin-bottom: 2%;
-	padding-bottom: 2%;
+dd {
+	display: none;
+	margin-left: 0;
 }
