@@ -29,3 +29,30 @@ td i{
 	display:block;
 	font-size: 7.5em;
 }
+
+.admin{
+	margin-top: 4%;
+	color: #001B45;
+	border-spacing: 0px;
+	border: 1px #001B45 solid;
+	width: 100%;
+}
+
+.adminHeader{
+	background-color: #00368A;
+	color: #F8F8F8;
+	border-bottom: 1px #001B45 solid;
+	text-align: center;
+}
+.adminOddRow{
+	text-align: left;
+	color: #001B45;
+	background-color: none;
+	border-bottom: 1px #001B45 solid;
+}
+.adminEvenRow{
+	text-align: left;
+	color: #001B45;
+	background-color: #D3D3D3;
+	border-bottom: 1px #001B45 solid;
+}
