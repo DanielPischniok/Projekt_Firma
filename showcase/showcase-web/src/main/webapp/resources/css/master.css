@@ -16,6 +16,7 @@ html,body {
 	color: #001B45;
 	background-color: #F8F8F8;
 	margin: 0;
+	white-space: nowrap;
 	}
 
 /*----------------------------------------------------------------------------------------*/
@@ -50,7 +51,7 @@ html,body {
 #content {
 	left: 20%;
 	height: 100%;
-	width: 75%;
+	width: 77%;
 	padding-left: 1%;
 	display: table;
 }	
