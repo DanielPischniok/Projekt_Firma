@@ -7,22 +7,27 @@
 
 <ui:composition>
 <h:outputStylesheet name="css/submenue.css" />
-	<h:form>
-	<!-- <div id="link">
-	<div class="text"><h:link outcome="/restricted/admin/administration.jsf" value="#{messages.admin_overview}"></h:link></div>
-	<div class="icon"><i class="icon-user">&#xe805;</i></div>
-	</div>-->
-	<!--  <div id="link">
-	<div class="text"><h:link outcome="/restricted/admin/rr/overview.jsf" value="#{messages.admin_roles_overview}"></h:link></div>
-	<div class="icon"><i class="icon-user">&#xe805;</i></div>
-	</div>-->
-	<p:accordionPanel>
-		<p:tab title="#{messages.admin_roles_overview}" titleStyleClass="link" >
-			<h:link outcome="/restricted/admin/administration.jsf" value="Link"></h:link>
-		</p:tab>
-	</p:accordionPanel>
-	</h:form>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+	$("dt").click(function(){  
+		$(this).next("dd").slideToggle("fast");  
+		$(this).children("a").toggleClass("closed open"); 
+	});
+});
+
+</script>
+<dl>
+<dt class="link"><a href="#" onclick="window.location.href='#{request.contextPath}/restricted/admin/rr/overview.jsf'">#{messages.admin_roles_overview}</a></dt>
+<dd class="text">TEST</dd>
+<dt class="link"><a href="#">Details</a></dt>
+<dd class="text">TEST</dd>
+<dt class="link"><a href="#">Details</a></dt>
+<dd class="text">TEST</dd>
+</dl>
 </ui:composition>
+	
 
 </html>
 

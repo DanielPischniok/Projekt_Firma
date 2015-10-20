@@ -4,24 +4,37 @@ a {
 	color: #F8F8F8;
 	text-decoration: none;
 	height: 2em;
+	display: block;
 }
 
 .link{
 	background-color: #45669B; 
 	color: #F8F8F8;
-	width: 87%;
-	height: 1em;
-	line-height: 1em;
+	width: 98%;
+	height: 2em;
+	line-height: 2em;
 	margin-bottom: 1%;
+	padding-left: 2%;
 }
 
 .text{
-	display: inline;
-	color: #F8F8F8;
+	color: #001B45;
 	text-align: left;
+	border-bottom: 1px solid #001B45;
+	margin-bottom: 2%;
+	padding: 2% 0% 4% 4%;
 }
 
 .link:Hover {
 	background-color: #156EFA;
 }
 
+dl {
+	margin-top: 0;
+	margin-bottom: 100%;
+}
+
+dd {
+	display: none;
+	margin-left: 0;
+}
