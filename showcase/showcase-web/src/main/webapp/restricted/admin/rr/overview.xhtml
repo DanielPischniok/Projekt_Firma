@@ -6,7 +6,7 @@
 	xmlns:p="http://primefaces.org/ui">
 
 <ui:composition template="/WEB-INF/templates/admin/admintemplate.xhtml">
-	<ui:define name="content">
+	<ui:define name="admincontent">
 		<h1>Roles and Rights Administration</h1>
 		<hr />
 		<h2>Rollendefinition</h2>
@@ -39,7 +39,7 @@
 						<h:outputText value="Löschen" />
 					</f:facet>
 					<p:commandButton value="Löschen" ajax="true"
-						update="rolesAndRightsForm globaleMessages"
+						update="@form :globaleMessages"
 						actionListener="#{rrBean.deleteCurrentRoleDef(role)}"
 						onclick="return confirm('Sind Sie sicher?');" />
 				</p:column>
