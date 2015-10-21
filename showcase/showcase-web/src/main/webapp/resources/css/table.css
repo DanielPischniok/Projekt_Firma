@@ -38,21 +38,24 @@ td i{
 	color: #001B45;
 	border-spacing: 0px;
 	border: 1px #001B45 solid;
+	border-collapse: collapse;
 	width: 100%;
 }
 
 .adminHeader{
 	background-color: #00368A;
 	color: #F8F8F8;
-	border-bottom: 1px #001B45 solid;
+	border: 1px #001B45 solid;
 	text-align: left;
 	width: 80%;
+	padding-left:1%;
 }
 .adminOddRow{
 	text-align: left;
 	color: #001B45;
 	background-color: none;
-	border-bottom: 1px #001B45 solid;
+	border: 1px #001B45 solid;
+	padding-left:1%;
 }
 .adminEvenRow{
 	text-align: left;

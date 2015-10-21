@@ -36,6 +36,9 @@ html,body {
 
 #wrapper {
 	width: 100%;
+	min-height: 92%;
+	height: auto !important;
+	height: 92%;
 	margin-top: -10px;
 }
 
@@ -50,19 +53,19 @@ html,body {
 	
 #content {
 	left: 20%;
-	height: 100%;
 	width: 77%;
+	height: 100px;
 	padding-left: 1%;
 	display: table;
+	overflow: auto;
 }	
 
 
 #footer {
 	position: absolute;
-	display: block;
-	bottom: 0;
 	width: 100%;
 	background-color: #00368A; 
+	height: 31px;
 }
 
 #logindiv {
@@ -81,8 +84,8 @@ html,body {
 	width: 50%;
 	top: 50%;
 	left: 50%;
-	margin-top: -250px;
-	margin-left: -375px;
+	margin-top: -17%;
+	margin-left: -26%;
 }
 
 /*----------------------------------------------------------------------------------------*/
