@@ -3,6 +3,7 @@
 table.start{
 	color: #F8F8F8;
 	border-spacing: 30px;
+	empty-cells: hide;
 }
 
 td.start {

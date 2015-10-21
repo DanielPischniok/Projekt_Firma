@@ -39,7 +39,7 @@ html,body {
 	min-height: 92%;
 	height: auto !important;
 	height: 92%;
-	margin-top: -10px;
+	margin-top: -10px; 
 }
 
 #submenue {
@@ -57,7 +57,6 @@ html,body {
 	height: 100px;
 	padding-left: 1%;
 	display: table;
-	overflow: auto;
 }	
 
 
@@ -65,7 +64,7 @@ html,body {
 	position: absolute;
 	width: 100%;
 	background-color: #00368A; 
-	height: 31px;
+	height: 33px;
 }
 
 #logindiv {
@@ -220,6 +219,15 @@ hr {
 	border-top: 1px solid #001B45;
 	margin: 0px 0px 10px 0px;
 	width: 100%;
+	min-width: 50%;
+	color: #001B45;
+}
+
+hr.flow {
+	border: none;
+	border-top: 1px solid #001B45;
+	margin: 0px 0px 10px 0px;
+	width: 70%;
 	min-width: 50%;
 	color: #001B45;
 }
