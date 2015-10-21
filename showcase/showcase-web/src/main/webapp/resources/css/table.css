@@ -15,14 +15,17 @@ td.start {
 }
 
 td a{
+	display: block;
+	padding-top: 15%;
 	width: 100%;
 	height: 100%;
 	text-decoration: none;
 	color: #F8F8F8;
 }
 
-td a:Hover,td i:Hover{
-	color: #156EFA;
+td.start:Hover{
+	background-color: #156EFA;
+	box-shadow: 0 20px 20px -6px #9AC0FC inset;
 }
 
 td i{

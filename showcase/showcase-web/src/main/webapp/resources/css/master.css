@@ -127,7 +127,8 @@ legend {
 }
 
 .i_submit_button:HOVER {
-	box-shadow: 0 8px 5px -6px #F8F8F8 inset;
+	background-color: #156EFA;
+	box-shadow: 0 8px 8px -6px #9AC0FC inset;
 }
 
 /*----------------------------------------------------------------------------------------*/
@@ -146,7 +147,8 @@ a.menue {
 }
 
 a.menue:HOVER {
-	box-shadow: 0 12px 5px -6px #F8F8F8 inset;
+	background-color: #156EFA;
+	box-shadow: 0 12px 12px -6px #9AC0FC inset;
 }
 
 /*----------------------------------------------------------------------------------------*/

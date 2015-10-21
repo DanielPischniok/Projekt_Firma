@@ -15,7 +15,7 @@
 			<p:commandButton action="#{rrBean.createNewRole()}"
 				value="Rolle erstellen"
 				oncomplete="PF('roledefinitionDialog').show();"
-				styleClass="i_submit_button" />
+				styleClass="i_submit_button"/>
 			<h:dataTable value="#{rrBean.definedRoles}" var="role" styleClass="admin" headerClass="adminHeader" rowClasses="adminOddRow, adminEvenRow">
 				<f:facet name="footer">
 					<h:outputText value="Keine Rollen definiert" rendered="#{empty rrBean.definedRoles}" styleClass="error" />

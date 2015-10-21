@@ -26,7 +26,7 @@
 						styleClass="i_submit_button" />
 					<h:dataTable id="roleAttributes"
 						value="#{rrBean.currentRole.attributes}" var="attr"
-						emptyMessage="Keine Attribute definiert">
+						emptyMessage="Keine Attribute definiert" styleClass="admin" headerClass="adminHeader" rowClasses="adminOddRow, adminEvenRow">
 						<p:column>
 							<f:facet name="header">
 								<h:outputText value="Name" />
@@ -54,7 +54,7 @@
 					</h:dataTable>
 				</h:panelGrid>
 				<h:panelGrid columns="2">
-					<h:commandButton value="Schließen"
+					<p:commandButton value="Schließen" process="@this" update="rollenDefinitionForm" ajax="true"
 						onclick="PF('roledefinitionDialog').hide();" immediate="true"
 						styleClass="i_submit_button" />
 					<h:commandButton value="Speichern"
