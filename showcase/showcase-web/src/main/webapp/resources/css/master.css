@@ -127,11 +127,13 @@ legend {
 	border-width: 1px;
 	border-color: #001b45;
 	background-color: #00368A;
+	cursor: pointer;
 }
 
 .i_submit_button:HOVER {
 	background-color: #156EFA;
 	box-shadow: 0 8px 8px -6px #9AC0FC inset;
+	
 }
 
 /*----------------------------------------------------------------------------------------*/
