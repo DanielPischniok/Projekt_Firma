@@ -12,6 +12,8 @@
 		<hr />
 		<h2>Rollendefinition</h2>
 		<h:form id="rolesAndRightsForm">
+			<span class="flowing_text">Lorem ipsum dolor sit amet, ne his elit appetere. Mei possim utamur habemus ea, ex mea fugit labore possit. Ne enim meliore has. No per justo solet, id malorum omittam est.</span>
+
 			<p:commandButton action="#{rrBean.createNewRole()}"
 				value="Rolle erstellen"
 				oncomplete="PF('roledefinitionDialog').show();"
@@ -29,21 +31,11 @@
 				</h:column>
 				<p:column>
 					<f:facet name="header">
-						<h:outputText value="Bearbeiten" />
+						<h:outputText value="Optionen" />
 					</f:facet>
 					<p:commandButton value="Bearbeiten"
 						action="#{rrBean.editUserRole(role)}"
 						oncomplete="PF('roledefinitionDialog').show();" 
-						styleClass="i_submit_button"/>
-				</p:column>
-				<p:column>
-					<f:facet name="header">
-						<h:outputText value="Löschen" />
-					</f:facet>
-					<p:commandButton value="Löschen" ajax="true"
-						update="@form :globaleMessages"
-						actionListener="#{rrBean.deleteCurrentRoleDef(role)}"
-						onclick="return confirm('Sind Sie sicher?');" 
 						styleClass="i_submit_button"/>
 				</p:column>
 			</h:dataTable>

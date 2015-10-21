@@ -34,7 +34,7 @@ td i{
 }
 
 .admin{
-	margin-top: 4%;
+	margin-top: 2%;
 	color: #001B45;
 	border-spacing: 0px;
 	border: 1px #001B45 solid;
@@ -45,7 +45,8 @@ td i{
 	background-color: #00368A;
 	color: #F8F8F8;
 	border-bottom: 1px #001B45 solid;
-	text-align: center;
+	text-align: left;
+	width: 80%;
 }
 .adminOddRow{
 	text-align: left;

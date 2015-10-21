@@ -219,6 +219,14 @@ hr {
 	color: #001B45;
 }
 
+.flowing_text {
+	display: block;
+	margin-bottom: 1%;
+	margin-top: 1%;
+	text-align: justify;
+	white-space: pre-wrap; 
+	width: 70%;
+}
 /*----------------------------------------------------------------------------------------*/
 
 /*MESSAGES Regel */
