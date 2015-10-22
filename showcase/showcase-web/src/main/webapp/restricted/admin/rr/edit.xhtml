@@ -54,7 +54,7 @@
 					</h:dataTable>
 				</h:panelGrid>
 				<h:panelGrid columns="2">
-					<h:commandButton value="Schließen"
+					<p:commandButton value="Schließen" ajax="true" process="@this" update="@none"
 						onclick="PF('roledefinitionDialog').hide();" immediate="true"
 						styleClass="i_submit_button" />
 					<h:commandButton value="Speichern"
