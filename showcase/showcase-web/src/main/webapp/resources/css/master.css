@@ -36,7 +36,10 @@ html,body {
 
 #wrapper {
 	width: 100%;
-	margin-top: -10px;
+	min-height: 92%;
+	height: auto !important;
+	height: 92%;
+	margin-top: -10px; 
 }
 
 #submenue {
@@ -50,8 +53,8 @@ html,body {
 	
 #content {
 	left: 20%;
-	height: 100%;
 	width: 77%;
+	height: 100px;
 	padding-left: 1%;
 	display: table;
 }	
@@ -59,10 +62,9 @@ html,body {
 
 #footer {
 	position: absolute;
-	display: block;
-	bottom: 0;
 	width: 100%;
 	background-color: #00368A; 
+	height: 33px;
 }
 
 #logindiv {
@@ -81,8 +83,8 @@ html,body {
 	width: 50%;
 	top: 50%;
 	left: 50%;
-	margin-top: -250px;
-	margin-left: -375px;
+	margin-top: -17%;
+	margin-left: -26%;
 }
 
 /*----------------------------------------------------------------------------------------*/
@@ -124,10 +126,13 @@ legend {
 	border-width: 1px;
 	border-color: #001b45;
 	background-color: #00368A;
+	cursor: pointer;
 }
 
 .i_submit_button:HOVER {
-	box-shadow: 0 8px 5px -6px #F8F8F8 inset;
+	background-color: #156EFA;
+	box-shadow: 0 8px 8px -6px #9AC0FC inset;
+	
 }
 
 /*----------------------------------------------------------------------------------------*/
@@ -146,7 +151,8 @@ a.menue {
 }
 
 a.menue:HOVER {
-	box-shadow: 0 12px 5px -6px #F8F8F8 inset;
+	background-color: #156EFA;
+	box-shadow: 0 12px 12px -6px #9AC0FC inset;
 }
 
 /*----------------------------------------------------------------------------------------*/
@@ -217,6 +223,23 @@ hr {
 	color: #001B45;
 }
 
+hr.flow {
+	border: none;
+	border-top: 1px solid #001B45;
+	margin: 0px 0px 10px 0px;
+	width: 70%;
+	min-width: 50%;
+	color: #001B45;
+}
+
+.flowing_text {
+	display: block;
+	margin-bottom: 1%;
+	margin-top: 1%;
+	text-align: justify;
+	white-space: pre-wrap; 
+	width: 70%;
+}
 /*----------------------------------------------------------------------------------------*/
 
 /*MESSAGES Regel */

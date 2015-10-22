@@ -27,6 +27,7 @@ a {
 
 .link:Hover {
 	background-color: #156EFA;
+	box-shadow: 0 12px 12px -6px #9AC0FC inset;
 }
 
 dl {
