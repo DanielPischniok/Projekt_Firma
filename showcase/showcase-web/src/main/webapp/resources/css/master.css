@@ -269,6 +269,10 @@ i.icon-user{
 
 /* PRIMEFACES */
 
+.ui-draggable .ui-dialog-titlebar {
+	border-bottom: 1px #001B45 solid !important;
+}
+
 .ui-dialog .ui-dialog-titlebar{
 	background-color: #156EFA;
 	color: #F8F8F8;
