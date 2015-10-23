@@ -267,6 +267,19 @@ i.icon-user{
 	color: #F8F8F8;
 }
 
+/* PRIMEFACES */
+
+.ui-dialog .ui-dialog-titlebar{
+	background-color: #156EFA;
+	color: #F8F8F8;
+	font-weight: bold;
+}
+
+.ui-growl-item {
+	background-color: #F8F8F8;
+	border: 1px #001B45 solid;
+}
+
 span.ui-growl-image:before{
 	font-family: 'Fontello' !important;
 	font-size: 30px;
