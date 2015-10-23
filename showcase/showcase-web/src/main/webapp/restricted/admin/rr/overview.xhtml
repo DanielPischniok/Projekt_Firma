@@ -14,10 +14,10 @@
 		<h:form id="rolesAndRightsForm">
 			<span class="flowing_text">Lorem ipsum dolor sit amet, ne his elit appetere. Mei possim utamur habemus ea, ex mea fugit labore possit. Ne enim meliore has. No per justo solet, id malorum omittam est.</span>
 <hr class="flow"/>
-			<p:commandButton action="#{rrBean.createNewRole()}"
-				value="Rolle erstellen"
+			<p:commandButton actionListener="#{rrBean.createNewRole()}"
+				value="Rolle erstellen" update="rollenDefinitionForm"
 				oncomplete="PF('roledefinitionDialog').show();"
-				styleClass="i_submit_button"/>
+				styleClass="i_submit_button" ajax="true"/>
 			<h:dataTable value="#{rrBean.definedRoles}" var="role" styleClass="admin" headerClass="adminHeader" rowClasses="adminOddRow, adminEvenRow">
 				<f:facet name="footer">
 					<h:outputText value="Keine Rollen definiert" rendered="#{empty rrBean.definedRoles}" styleClass="error" />
@@ -34,7 +34,7 @@
 						<h:outputText value="Optionen" />
 					</f:facet>
 					<p:commandButton value="Bearbeiten"
-						action="#{rrBean.editUserRole(role)}"
+						action="#{rrBean.editUserRole(role)}" update="rollenDefinitionForm"
 						oncomplete="PF('roledefinitionDialog').show();" 
 						styleClass="i_submit_button"/>
 				</p:column>
