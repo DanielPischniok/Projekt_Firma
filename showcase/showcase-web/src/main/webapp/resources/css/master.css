@@ -135,6 +135,23 @@ legend {
 	
 }
 
+.i_submit_button_popup {
+	color: #F8F8F8;
+	font-size: 95%;
+	border-radius:5px;
+	border-width: 1px;
+	border-color: #001b45;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	background-color: #45669B;
+	cursor: pointer;
+}
+
+.i_submit_button_popup:HOVER {
+	box-shadow: 0 8px 8px -6px #fcfcfc inset;
+	
+}
+
 /*----------------------------------------------------------------------------------------*/
 
 /*HYPERLINK Regel*/
@@ -236,7 +253,7 @@ hr.flow {
 	display: block;
 	margin-bottom: 1%;
 	margin-top: 1%;
-	text-align: justify;
+	text-align: left;
 	white-space: pre-wrap; 
 	width: 70%;
 }
@@ -265,14 +282,21 @@ i.icon-user{
 	font-family: 'Fontello';
 	font-style: normal;
 	color: #F8F8F8;
+	-webkit-font-smoothing: antialiased;
 }
 
 /* PRIMEFACES */
 
+.ui-draggable .ui-dialog-titlebar {
+	border-bottom: 1px #001B45 solid !important;
+}
+
 .ui-dialog .ui-dialog-titlebar{
-	background-color: #156EFA;
+	padding: 0px 5px 0px 5px !important;
+	background-color: #45669B;
 	color: #F8F8F8;
 	font-weight: bold;
+	font-size: 17px;
 }
 
 .ui-growl-item {
@@ -298,10 +322,19 @@ span.ui-growl-image-info{
 	min-height: 400px;
 	min-width: 400px;
 	border: 1px #001B45 solid;
+	overflow: visible;
 }
 .pop_up2 {
 	background-color: #F8F8F8;
 	min-height: 200px;
 	min-width: 200px;
 	border: 1px #001B45 solid;
+}
+
+.label {
+	display: block;
+	margin-top: 1%;
+	min-width: 400px;
+	font-weight: bold;
+	font-size: 16px;
 }
