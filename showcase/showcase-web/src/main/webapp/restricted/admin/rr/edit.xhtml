@@ -8,8 +8,8 @@
 <ui:composition>
 	<h:form id="rollenDefinitionForm">
 		<p:dialog modal="true" header="Rollendefinition"
-			onShow="PF('roledefinitionDialog').loadContents();"
-			id="roledefinitionDialog" widgetVar="roledefinitionDialog">
+			onShow="PF('roledefinitionDialog').loadContents();" resizable="false"
+			id="roledefinitionDialog" widgetVar="roledefinitionDialog" styleClass="pop_up">
 			<h:messages escape="false" />
 			<h:panelGroup id="roleDefGroup">
 				<h:panelGrid columns="2">
@@ -54,7 +54,7 @@
 					</h:dataTable>
 				</h:panelGrid>
 				<h:panelGrid columns="2">
-					<p:commandButton value="Schließen" process="@this" update="rollenDefinitionForm" ajax="true"
+					<p:commandButton value="Schließen" process="@this" update="rollenDefinitionForm" ajax="true" 
 						onclick="PF('roledefinitionDialog').hide();" immediate="true"
 						styleClass="i_submit_button" />
 					<h:commandButton value="Speichern"
@@ -64,9 +64,9 @@
 		</p:dialog>
 		</h:form>
 <h:form>
-		<p:dialog id="editCurrentAttribute" widgetVar="editCurrentAttribute"
-			header="Attribut definieren" dynamic="true" modal="true">
-			<h:panelGrid columns="2">
+		<p:dialog id="editCurrentAttribute" widgetVar="editCurrentAttribute" resizable="false"
+			header="Attribut definieren" dynamic="true" modal="true" styleClass="pop_up2">
+			<h:panelGrid columns="2"> 
 				<h:outputLabel value="#{messages.label_name}" />
 				<h:inputText value="#{rrBean.currentAttribute.attributeName}" styleClass="i_text"/>
 			</h:panelGrid>

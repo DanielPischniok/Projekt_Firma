@@ -277,3 +277,18 @@ span.ui-growl-image:before{
 span.ui-growl-image-info{
 	background: none;
 }
+
+/*POP-UP*/
+
+.pop_up {
+	background-color: #F8F8F8;
+	min-height: 400px;
+	min-width: 400px;
+	border: 1px #001B45 solid;
+}
+.pop_up2 {
+	background-color: #F8F8F8;
+	min-height: 200px;
+	min-width: 200px;
+	border: 1px #001B45 solid;
+}
