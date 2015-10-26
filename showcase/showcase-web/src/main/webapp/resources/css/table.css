@@ -48,7 +48,7 @@ td i{
 	border: 1px #001B45 solid;
 	text-align: left;
 	width: 80%;
-	padding-left:1%;
+	padding-left:0.5%;
 }
 
 .adminHeader_popup{
@@ -57,7 +57,7 @@ td i{
 	border: 1px #001B45 solid;
 	text-align: left;
 	width: 80%;
-	padding-left:1%;
+	padding-left: 2%;
 }
 
 .adminOddRow{
@@ -65,7 +65,7 @@ td i{
 	color: #001B45;
 	background-color: none;
 	border: 1px #001B45 solid;
-	padding-left:1%;
+	padding-left: 2%;
 }
 .adminEvenRow{
 	text-align: left;
