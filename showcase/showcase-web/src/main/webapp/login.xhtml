@@ -24,10 +24,10 @@ ul {
 					<h:messages styleClass="message" errorClass="error" escape="false" />
 					<h:panelGrid columns="2">
 						<h:outputLabel value="Benutzer: " />
-						<h:inputText value="#{loginBean.username}" styleClass="i_text" />
+						<h:inputText value="#{loginBean.username}" styleClass="i_text" tabindex="1"/>
 
 						<h:outputLabel value="Passwort: " />
-						<h:inputSecret value="#{loginBean.password}" styleClass="i_text" />
+						<h:inputSecret value="#{loginBean.password}" styleClass="i_text" tabindex="2"/>
 					</h:panelGrid>
 					<h:commandButton action="#{loginBean.login()}" value="Login"
 						styleClass="i_submit_button">

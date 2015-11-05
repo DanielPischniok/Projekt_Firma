@@ -21,7 +21,7 @@
 	<li class="benutzer">
 	<i class="icon-user">&#xe802;</i> 
 	<h5>#{loginBean.signedUser}</h5>
-	<input type="text" class="i_text" />
+	<input type="text" class="i_text" tabindex="100"/>
 	<input type="submit" class="i_submit_button" value="Suchen" />
 	<h:commandButton styleClass="i_submit_button" action="#{loginBean.logout()}" value="logout" rendered="#{not empty loginBean.signedUser}" />
 	</li>
