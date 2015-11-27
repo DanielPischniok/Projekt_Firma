@@ -33,10 +33,18 @@
 					<f:facet name="header">
 						<h:outputText value="Optionen" />
 					</f:facet>
+					<h:panelGrid columns="2">
 					<p:commandButton value="Bearbeiten"
 						action="#{rrBean.editUserRole(role)}" update="rollenDefinitionForm"
 						oncomplete="PF('roledefinitionDialog').show();" 
 						styleClass="i_submit_button"/>
+					<p:commandButton value="#{messages.button_delete}"
+						action="#{rrBean.deleteCurrentRoleDef(role)}" update="rolesAndRightsForm globaleMessages"
+						styleClass="i_submit_button">
+						<p:confirm header="Bestätigung" message="Sind Sie sicher?" icon="ui-icon-alert" />
+					</p:commandButton>
+
+					</h:panelGrid>
 				</p:column>
 			</h:dataTable>
 		</h:form>

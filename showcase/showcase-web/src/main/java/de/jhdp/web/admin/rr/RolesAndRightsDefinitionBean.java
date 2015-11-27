@@ -6,6 +6,7 @@ import java.util.List;
 
 import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -13,6 +14,7 @@ import javax.inject.Named;
 import de.jhdp.model.users.UserRoleAttributeDefinition;
 import de.jhdp.model.users.UserRoleDefinition;
 import de.jhdp.service.RolesRightsDefinitionService;
+import de.jhdp.util.ExistingUsersForRoleException;
 import de.jhdp.web.login.JSFUtilsBean;
 
 @Named("rrBean")
@@ -54,7 +56,18 @@ public class RolesAndRightsDefinitionBean implements Serializable{
 	}
 	
 	public String saveCurrentRole(){
-		rrService.saveOrUpdate(currentRole, deletedAttributes);
+		try{
+			if(rrService.findRoleDefinitionByName(currentRole) != null){
+				jsfUtils.addGlobalFacesMessage(FacesMessage.SEVERITY_ERROR, "Der Name der Rolle muss eindeutig sein");
+				FacesContext.getCurrentInstance().validationFailed();
+				return "";
+			}
+			
+			rrService.saveOrUpdate(currentRole, deletedAttributes);
+		}catch(Exception e){
+			jsfUtils.addGlobalFacesMessage(FacesMessage.SEVERITY_ERROR, "Der Name der Rolle muss eindeutig sein");
+		}
+		
 		currentRole = new UserRoleDefinition();
 		deletedAttributes = new ArrayList<>();
 		currentAttribute = new UserRoleAttributeDefinition();
@@ -65,9 +78,15 @@ public class RolesAndRightsDefinitionBean implements Serializable{
 	
 	public String deleteCurrentRoleDef(UserRoleDefinition role){
 		this.currentRole = new UserRoleDefinition();
-		rrService.deleteRoleDefinition(role);
-		this.init();
-		jsfUtils.addGlobalFacesMessageBundle(FacesMessage.SEVERITY_INFO, "message_delete_success");
+		try{
+			rrService.deleteRoleDefinition(role);
+			jsfUtils.addGlobalFacesMessageBundle(FacesMessage.SEVERITY_INFO, "message_delete_success");
+			this.init();
+		}catch(Exception e){
+			jsfUtils.addGlobalFacesMessage(FacesMessage.SEVERITY_ERROR, "Es gibt User, die der Rolle angehören");
+		}
+		
+		
 		return "";
 	}
 	

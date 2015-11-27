@@ -21,6 +21,12 @@
     <div id="content">
     <p:growl autoUpdate="true" escape="false" sticky="true" id="globaleMessages" infoIcon="./imgs/user.png" />
  	<ui:insert name="content"></ui:insert>
+ 	<h:form id="confirmationForm">
+ 	<p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
+        <p:commandButton value="Ja" type="button" styleClass="ui-confirmdialog-yes" icon="ui-icon-check" />
+        <p:commandButton value="Nein" type="button" styleClass="ui-confirmdialog-no" icon="ui-icon-close" />
+    </p:confirmDialog>
+ 	</h:form>
  </div>
  </div>
  <div id="footer">

@@ -8,8 +8,10 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
+import de.jhdp.model.users.ApplicationUser;
 import de.jhdp.model.users.UserRoleAttributeDefinition;
 import de.jhdp.model.users.UserRoleDefinition;
+import de.jhdp.util.ExistingUsersForRoleException;
 
 
 /**
@@ -23,6 +25,17 @@ public class RolesRightsDefinitionService {
 	EntityManager em;
 
     public RolesRightsDefinitionService() {
+    }
+    
+    public UserRoleDefinition findRoleDefinitionByName(UserRoleDefinition user){
+    	List<UserRoleDefinition> result = em.createQuery("SELECT u FROM UserRoleDefinition u WHERE u.roleName = :roleName AND u.id != :id", UserRoleDefinition.class)
+    	.setParameter("roleName", user.getRoleName())
+    	.setParameter("id", user.getId()==null?0:user.getId())
+    	.getResultList();
+    	if(result.isEmpty()){
+    		return null;
+    	}
+    	return result.get(0);
     }
     
     public List<UserRoleDefinition> getDefinedRoles(){
@@ -50,7 +63,11 @@ public class RolesRightsDefinitionService {
 		}
     }
     
-    public void deleteRoleDefinition(UserRoleDefinition role){
+    public void deleteRoleDefinition(UserRoleDefinition role) throws ExistingUsersForRoleException{
+    	if(!em.createQuery("SELECT u FROM ApplicationUser u join fetch u.roles ur WHERE ur.roleName = :roleName", ApplicationUser.class)
+    		.setParameter("roleName", role.getRoleName()).getResultList().isEmpty()){
+    			throw new ExistingUsersForRoleException();
+    		}
     	UserRoleDefinition entityRole = em.merge(role);
     	for(UserRoleAttributeDefinition att: entityRole.getAttributes()){
     		em.remove(att);
