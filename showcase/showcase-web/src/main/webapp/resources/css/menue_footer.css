@@ -1,37 +1,15 @@
-
+#menue {
+	width:100%;
+}
 ul {
-	display: table;
-	list-style: none;
+	margin: 0;
 	padding: 0;
-	width: 100%;
+	list-style-type: none;
 }
 
 li {
-	display: table-cell;
-	float: left;
-	line-height: 30px;
+	display: inline;
 }
-
-li.logo{
-	width: 19%;
-	padding-left: 1%;
-}
-
-li.modul{
-	width: 8%;
-}
-
-li.benutzer {
-	float: right;
-	padding-right: 1%;
-}
-
-li.footer{
-	line-height: 0px;
-	text-align: center;
-	width: 100%;
-}
-
 i{
 	font-size: 17px;
 }
