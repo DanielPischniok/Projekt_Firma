@@ -24,13 +24,11 @@ html,body {
 /* DIV Layer */
 	 
 #menue {
-	display: block;
 	background-color: #00368A;
 	width: 100%;
 	margin: 0;
 	padding: 0;
 	box-shadow: 0px 5px 2px #001b45;
-	layout: block;
 	margin-top: -15px;
 }
 
