@@ -10,19 +10,14 @@
 </h:head>
 <h:body>
 <h:form>
-	<ul>
-		<li><h4>PROJEKT FIRMA</h4></li>
-		<li><h:link outcome="/restricted/start.jsf" styleClass="menue" value="Startcenter" /></li>
-		<li><a href="#" class="menue">Projekte</a></li>
-		<li><a href="#" class="menue">Finanzen</a></li>
-		<li><h:link outcome="/restricted/admin/administration.jsf" styleClass="menue" value="Administration" /></li>
-		<li><i class="icon-user">&#xe802;</i> 
-	<h5>#{loginBean.signedUser}</h5>
-	<input type="text" class="i_text" tabindex="100"/>
-	<input type="submit" class="i_submit_button" value="Suchen" />
-	<h:commandButton styleClass="i_submit_button" action="#{loginBean.logout()}" value="logout" rendered="#{not empty loginBean.signedUser}" />
-	</li>
-	</ul>
+<ul>
+	<li>Projekt_Firma</li>
+	<li>Startcenter</li>
+	<li>Projekte</li>
+	<li>Finanzen</li>
+	<li>Administration</li>
+	<li>Login</li>
+</ul>
 
 
 
