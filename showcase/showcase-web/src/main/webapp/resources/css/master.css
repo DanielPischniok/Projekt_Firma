@@ -8,7 +8,6 @@
 
 /* ALLGEMEINE Regel */
 html,body {
-	height: 100%;
 	max-width: 100%;
 	margin: 0px;
 	font-family: HelveticaNeue, Arial, sans-serif;
@@ -196,22 +195,6 @@ legend {
 /*----------------------------------------------------------------------------------------*/
 
 /*HYPERLINK Regel*/
-
-a.menue {
-	display: block;
-	color: #F8F8F8;
-	margin-right: 20px;
-	padding-left: 8px;
-	padding-right: 8px;
-	text-decoration: none;
-	border-right: 1px solid #F8F8F8;
-	border-left: 1px solid #F8F8F8;
-}
-
-a.menue:HOVER {
-	background-color: #156EFA;
-	box-shadow: 0 12px 12px -6px #9AC0FC inset;
-}
 
 /*----------------------------------------------------------------------------------------*/
 
