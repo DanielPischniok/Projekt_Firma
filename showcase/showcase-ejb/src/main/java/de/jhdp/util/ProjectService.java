@@ -5,11 +5,12 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
 
-public class ProjectUtils {
+import javax.ejb.Singleton;
+
+@Singleton
+public class ProjectService {
 	
-	public String generatePassword(){
-		String pwd = "123";
-		
+	public String generatePassword(String pwd){
 
 		MessageDigest md;
 		try {

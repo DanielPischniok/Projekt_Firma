@@ -32,6 +32,10 @@
 						<h:column>
 							<p:commandButton id="editButton" actionListener="#{userBean.editCurrentUser(user)}" update="editUserForm" process="@this"
 								ajax="true" oncomplete="PF('editUserDialog').show();" value="#{messages.button_edit}"/>
+							<p:commandButton id="deleteButton" actionListener="#{userBean.deleteCurrentUser(user)}" update="editUserForm" process="@this"
+								ajax="true" value="#{messages.button_delete}">
+								<p:confirm header="Bestätigung" message="Sind Sie sicher?" icon="ui-icon-alert" />
+							</p:commandButton>
 						</h:column>
 					</h:dataTable>
 		</h:form>

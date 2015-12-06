@@ -14,17 +14,16 @@
 				<h:outputText value="#{userBean.currentUser.userId}" />
 				<h:outputLabel value="#{messages.label_username}" />
 				<h:inputText value="#{userBean.currentUser.userIdentifier}" />
+				<ui:remove>
 				<h:outputLabel value="#{messages.label_password}" />
 				<h:inputSecret value="#{userBean.currentUser.password}" />
+				</ui:remove>
 				<h:outputLabel value="#{messages.label_user_roles}"></h:outputLabel>
-				<p:selectManyMenu value="#{userBean.currentUser.roles}"
+				<h:selectManyMenu value="#{userBean.selectedRoles}"
 					converter="genericSelectItemsConverter" var="role"
 					showCheckbox="true">
 					<f:selectItems value="#{userBean.allRoleValues}" />
-					<p:column>
-						<h:outputText value="#{role.roleName}" />
-					</p:column>
-				</p:selectManyMenu>
+				</h:selectManyMenu>
 			</h:panelGrid>
 			<h:panelGrid columns="2">
 				<p:commandButton ajax="true" value="#{messages.button_abort}"
