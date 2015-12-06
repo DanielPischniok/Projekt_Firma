@@ -117,13 +117,13 @@ public class RolesAndRightsDefinitionBean implements Serializable{
 	}
 	
 	public void deleteCurrentAttribute(UserRoleAttributeDefinition attr){
+		System.out.println("Delete attribute "+attr.getAttributeName());
 		if(deletedAttributes == null){
 			deletedAttributes = new ArrayList<UserRoleAttributeDefinition>();
 		}
 		deletedAttributes.add(attr);
 		currentRole.getAttributes().remove(attr);
 		this.currentAttribute = new UserRoleAttributeDefinition();
-		init();
 	}
 
 	public List<UserRoleDefinition> getDefinedRoles() {

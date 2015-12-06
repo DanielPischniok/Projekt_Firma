@@ -45,7 +45,7 @@ Attribute sind nicht zwingend Notwendig.</p>
 								actionListener="#{rrBean.editCurrentAttribute(attr)}"
 								onclick="PF('editCurrentAttribute').show();"
 								styleClass="i_submit_button_popup" />
-								<p:commandButton value="Löschen" update="roleAttributes"
+								<p:commandButton value="Löschen" update="@form"
 								process="@this"
 								actionListener="#{rrBean.deleteCurrentAttribute(attr)}"
 								styleClass="i_submit_button_popup" />
