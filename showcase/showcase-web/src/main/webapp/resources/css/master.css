@@ -8,7 +8,6 @@
 
 /* ALLGEMEINE Regel */
 html,body {
-	height: 100%;
 	max-width: 100%;
 	margin: 0px;
 	font-family: HelveticaNeue, Arial, sans-serif;
@@ -22,24 +21,23 @@ html,body {
 /*----------------------------------------------------------------------------------------*/
 
 /* DIV Layer */
-	 
 #menue {
-	display: block;
-	background-color: #00368A;
+	position: fixed;
+	top: 0;
+	left: 0;
 	width: 100%;
-	margin: 0;
-	padding: 0;
+	height: 30px;
+	background-color: #00368A;
 	box-shadow: 0px 5px 2px #001b45;
-	layout: block;
-	margin-top: -15px;
+	z-index: 9999;
 }
 
 #wrapper {
+	margin-top: 34px;
 	width: 100%;
 	min-height: 92%;
 	height: auto !important;
-	height: 92%;
-	margin-top: -10px; 
+	height: 92%; 
 }
 
 #submenue {
@@ -57,14 +55,16 @@ html,body {
 	height: 100px;
 	padding-left: 1%;
 	display: table;
-}	
-
-
+}
+	
 #footer {
-	position: absolute;
+	position: fixed;
+	bottom: 0;
+	left: 0;
 	width: 100%;
 	background-color: #00368A; 
-	height: 33px;
+	height: 30px;
+	z-index: 9999;
 }
 
 #logindiv {
@@ -105,7 +105,6 @@ legend {
 	border: 1px solid #001B45;
 	border-radius: 5px;
 	padding: 10px;
-	text-align: right;
 	color: #F8F8F8;
 	letter-spacing: 5px;
 	
@@ -155,22 +154,6 @@ legend {
 /*----------------------------------------------------------------------------------------*/
 
 /*HYPERLINK Regel*/
-
-a.menue {
-	display: block;
-	color: #F8F8F8;
-	margin-right: 20px;
-	padding-left: 8px;
-	padding-right: 8px;
-	text-decoration: none;
-	border-right: 1px solid #F8F8F8;
-	border-left: 1px solid #F8F8F8;
-}
-
-a.menue:HOVER {
-	background-color: #156EFA;
-	box-shadow: 0 12px 12px -6px #9AC0FC inset;
-}
 
 /*----------------------------------------------------------------------------------------*/
 
@@ -231,6 +214,15 @@ h6 {
 	padding-right: 20px;
 }
 
+h7 {
+	font-family: HelveticaNeue, Arial, sans-serif;
+	font-size: 14px;
+	color: #001B45;
+	font-style: none;
+	font-weight: bold;
+	display: block;
+}
+
 hr {
 	border: none;
 	border-top: 1px solid #001B45;
@@ -282,7 +274,6 @@ i.icon-user{
 	font-family: 'Fontello';
 	font-style: normal;
 	color: #F8F8F8;
-	-webkit-font-smoothing: antialiased;
 }
 
 /* PRIMEFACES */
@@ -315,6 +306,9 @@ span.ui-growl-image-info{
 	background: none;
 }
 
+.ui-shadow {
+    box-shadow: 0px 0px 500px #45669B !important;
+}
 /*POP-UP*/
 
 .pop_up {
@@ -322,7 +316,7 @@ span.ui-growl-image-info{
 	min-height: 400px;
 	min-width: 400px;
 	border: 1px #001B45 solid;
-	overflow: visible;
+	overflow: scroll;
 }
 .pop_up2 {
 	background-color: #F8F8F8;
