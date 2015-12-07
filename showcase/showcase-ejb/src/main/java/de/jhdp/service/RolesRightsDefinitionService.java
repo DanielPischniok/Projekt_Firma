@@ -64,10 +64,6 @@ public class RolesRightsDefinitionService {
     }
     
     public void deleteRoleDefinition(UserRoleDefinition role) throws ExistingUsersForRoleException{
-    	if(!em.createQuery("SELECT u FROM ApplicationUser u join fetch u.roles ur WHERE ur.roleName = :roleName", ApplicationUser.class)
-    		.setParameter("roleName", role.getRoleName()).getResultList().isEmpty()){
-    			throw new ExistingUsersForRoleException();
-    		}
     	UserRoleDefinition entityRole = em.merge(role);
     	for(UserRoleAttributeDefinition att: entityRole.getAttributes()){
     		em.remove(att);
