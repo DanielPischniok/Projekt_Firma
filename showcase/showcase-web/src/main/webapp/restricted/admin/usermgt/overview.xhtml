@@ -7,10 +7,15 @@
 
 <ui:composition template="/WEB-INF/templates/admin/admintemplate.xhtml">
 	<ui:define name="admincontent">
+	<h:outputStylesheet name="css/table.css" />
 		<h1>#{messages.user_mgmt_overview_head}</h1>
-		<br/>
+		<hr />
 		<h:form id="userOverviewForm">
-		<h:dataTable id="UserOverviewTable" value="#{userBean.allUsers}" var="user">
+		<span class="flowing_text">Lorem ipsum dolor sit amet, ne his elit appetere. Mei possim utamur habemus ea, ex mea fugit labore possit. 
+			Ne enim meliore has. No per justo solet, id malorum omittam est.</span>
+			<hr class="flow" />
+		<h:dataTable id="UserOverviewTable" value="#{userBean.allUsers}" var="user" styleClass="admin" headerClass="adminHeader"
+				rowClasses="adminOddRow, adminEvenRow">
 						<h:column>
 							<f:facet name="header">
 								<h:outputText value="#{messages.label_username}" />
@@ -29,9 +34,11 @@
 						</h:column>
 						<h:column>
 							<p:commandButton id="editButton" actionListener="#{userBean.editCurrentUser(user)}" update="editUserForm" process="@this"
-								ajax="true" oncomplete="PF('editUserDialog').show();" value="#{messages.button_edit}"/>
+								ajax="true" oncomplete="PF('editUserDialog').show();" value="#{messages.button_edit}"
+								styleClass="i_submit_button"/>
 							<p:commandButton id="deleteButton" actionListener="#{userBean.deleteCurrentUser(user)}" update="editUserForm" process="@this"
-								ajax="true" value="#{messages.button_delete}">
+								ajax="true" value="#{messages.button_delete}"
+								styleClass="i_submit_button">
 								<p:confirm header="Bestätigung" message="Sind Sie sicher?" icon="ui-icon-alert" />
 							</p:commandButton>
 						</h:column>

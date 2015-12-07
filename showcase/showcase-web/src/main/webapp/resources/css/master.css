@@ -121,7 +121,7 @@ legend {
 .i_submit_button {
 	color: #001b45;
 	font-size: 95%;
-	border-radius:0px;
+	border-radius:5px;
 	border-width: 1px;
 	border-color: #001b45;
 	background-color: #F8F8F8;
@@ -137,7 +137,7 @@ legend {
 .i_submit_button_popup {
 	color: #001b45;
 	font-size: 95%;
-	border-radius:0px;
+	border-radius:5px;
 	border-width: 1px;
 	border-color: #001b45;
 	margin-top: 2%;
@@ -147,6 +147,8 @@ legend {
 }
 
 .i_submit_button_popup:HOVER {
+	color: #F8F8F8;
+	background-color: #45669B;
 	box-shadow: 0 8px 8px -6px #fcfcfc inset;
 	
 }
