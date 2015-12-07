@@ -97,6 +97,9 @@ public class RolesAndRightsDefinitionBean implements Serializable{
 	
 	public String saveCurrentAttribute(){
 		boolean unique = true;
+		if(currentRole.getAttributes() == null){
+			currentRole.setAttributes(new ArrayList<UserRoleAttributeDefinition>());
+		}
 		for(UserRoleAttributeDefinition attr: currentRole.getAttributes()){
 			if(attr.getAttributeName().equalsIgnoreCase(currentAttribute.getAttributeName())){
 				unique = false;

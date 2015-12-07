@@ -7,21 +7,24 @@
 
 <ui:composition template="/WEB-INF/templates/admin/admintemplate.xhtml">
 	<ui:define name="admincontent">
-	<h:outputStylesheet name="css/table.css" />
+		<h:outputStylesheet name="css/table.css" />
 		<h1>Roles and Rights Administration</h1>
 		<hr />
 		<h2>Rollendefinition</h2>
 		<h:form id="rolesAndRightsForm">
 			<span class="flowing_text">Lorem ipsum dolor sit amet, ne his elit appetere. Mei possim utamur habemus ea, ex mea fugit labore possit. Ne enim meliore has. No per justo solet, id malorum omittam est.</span>
-<hr class="flow"/>
-			<h:dataTable value="#{rrBean.definedRoles}" var="role" styleClass="admin" headerClass="adminHeader" rowClasses="adminOddRow, adminEvenRow">
+			<hr class="flow" />
+			<h:dataTable value="#{rrBean.definedRoles}" var="role"
+				styleClass="admin" headerClass="adminHeader"
+				rowClasses="adminOddRow, adminEvenRow">
 				<f:facet name="footer">
-					<h:outputText value="Keine Rollen definiert" rendered="#{empty rrBean.definedRoles}" styleClass="error" />
+					<h:outputText value="Keine Rollen definiert"
+						rendered="#{empty rrBean.definedRoles}" styleClass="error" />
 				</f:facet>
 
 				<h:column>
 					<f:facet name="header">
-						<h:outputText value="Rolle"/>
+						<h:outputText value="Rolle" />
 					</f:facet>
 					<h:outputText value="#{role.roleName}" />
 				</h:column>
@@ -30,15 +33,18 @@
 						<h:outputText value="Optionen" />
 					</f:facet>
 					<h:panelGrid columns="2">
-					<p:commandButton value="Bearbeiten"
-						action="#{rrBean.editUserRole(role)}" update="rollenDefinitionForm"
-						oncomplete="PF('roledefinitionDialog').show();" 
-						styleClass="i_submit_button"/>
-					<p:commandButton value="#{messages.button_delete}"
-						action="#{rrBean.deleteCurrentRoleDef(role)}" update="rolesAndRightsForm globaleMessages"
-						styleClass="i_submit_button">
-						<p:confirm header="Bestätigung" message="Sind Sie sicher?" icon="ui-icon-alert"/>
-					</p:commandButton>
+						<p:commandButton value="Bearbeiten"
+							action="#{rrBean.editUserRole(role)}"
+							update="rollenDefinitionForm"
+							oncomplete="PF('roledefinitionDialog').show();"
+							styleClass="i_submit_button" />
+						<p:commandButton value="#{messages.button_delete}"
+							action="#{rrBean.deleteCurrentRoleDef(role)}"
+							update="rolesAndRightsForm globaleMessages"
+							styleClass="i_submit_button">
+							<p:confirm header="Bestätigung" message="Sind Sie sicher?"
+								icon="ui-icon-alert" />
+						</p:commandButton>
 
 					</h:panelGrid>
 				</p:column>

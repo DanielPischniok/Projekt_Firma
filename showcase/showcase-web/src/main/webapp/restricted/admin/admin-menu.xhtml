@@ -23,10 +23,13 @@ $(document).ready(function(){
 <dd class="text" style="#{view.viewId == '/restricted/admin/rr/overview.xhtml'?'display:block;':''}">
 <h7>Rollendefinition</h7>
 <hr/>
+<h:form>
 <p:commandButton actionListener="#{rrBean.createNewRole()}"
-				value="Rolle erstellen" update="rollenDefinitionForm"
+				value="Rolle erstellen" 
 				oncomplete="PF('roledefinitionDialog').show();"
-				styleClass="i_submit_button" ajax="true"/></dd>
+				styleClass="i_submit_button" ajax="true"/>
+</h:form>
+</dd>
 <dt class="link"><a href="#">Details</a></dt>
 <dd class="text"><h7>Test</h7>
 <hr/>
