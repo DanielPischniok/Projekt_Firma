@@ -298,7 +298,7 @@ i.icon-user{
 span.ui-growl-image:before{
 	font-family: 'Fontello' !important;
 	font-size: 30px;
-	content: '\e808';
+	content: '\e802';
 	background: none;
 }
 
@@ -313,10 +313,9 @@ span.ui-growl-image-info{
 
 .pop_up {
 	background-color: #F8F8F8;
-	min-height: 400px;
-	min-width: 400px;
+	height: auto;
+	min-width: auto;
 	border: 1px #001B45 solid;
-	overflow: scroll;
 }
 .pop_up2 {
 	background-color: #F8F8F8;
