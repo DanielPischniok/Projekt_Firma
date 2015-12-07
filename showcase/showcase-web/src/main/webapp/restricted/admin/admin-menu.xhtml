@@ -24,15 +24,17 @@ $(document).ready(function(){
 <h7>#{messages.admin_roles_overview_sub}</h7>
 <hr/>
 <p:commandButton actionListener="#{rrBean.createNewRole()}"
-				value="Rolle erstellen" update="@all"
+				value="Rolle erstellen" 
 				oncomplete="PF('roledefinitionDialog').show();"
-				styleClass="i_submit_button" ajax="true"/></dd>
+				styleClass="i_submit_button" ajax="true"/>
+</dd>
 <dt class="link"><a href="#" onclick="window.location.href='#{request.contextPath}/restricted/admin/usermgt/overview.jsf';">#{messages.user_mgmt_overview}</a></dt>
 <dd class="text" style="#{view.viewId == '/restricted/admin/usermgt/overview.xhtml'?'display:block;':''}">
 <h7>#{messages.user_mgmt_overview_sub}</h7>
 <hr/>
 <p:commandButton value="#{messages.button_create_new_user}" actionListener="#{userBean.createNewUser()}" ajax="true" 
-			oncomplete="PF('editUserDialog').show();" process="@this" styleClass="i_submit_button"/></dd>
+			oncomplete="PF('editUserDialog').show();" process="@this" styleClass="i_submit_button"/>
+</dd>
 <dt class="link"></dt>
 <dd class="text"><h7>Test</h7>
 <hr/>

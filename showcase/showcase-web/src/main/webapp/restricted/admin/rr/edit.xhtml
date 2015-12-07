@@ -3,37 +3,41 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:p="http://primefaces.org/ui" >
+	xmlns:p="http://primefaces.org/ui">
 
 <ui:composition>
-		<p:dialog modal="true" header="Rollendefinition"
-			onShow="PF('roledefinitionDialog').loadContents();" resizable="false"
-			id="roledefinitionDialog" widgetVar="roledefinitionDialog" styleClass="pop_up">
-			<h:form id="rollenDefinitionForm">
+	<p:dialog modal="true" header="Rollendefinition" draggable="false" appendTo="@(body)"
+		onShow="PF('roledefinitionDialog').loadContents();" resizable="false"
+		id="roledefinitionDialog" widgetVar="roledefinitionDialog"
+		styleClass="pop_up">
+		<h:form id="rollenDefinitionForm">
 			<h:messages escape="false" />
 			<h:panelGroup id="roleDefGroup">
-			<p class="flowing_text">Erstellen Sie neue Rollen und vergeben Sie für diese Rollen Attribute.
-Attribute sind nicht zwingend Notwendig.</p>
-<hr/>
+				<p class="flowing_text">Erstellen Sie neue Rollen und vergeben Sie für diese Rollen Attribute. Attribute sind nicht zwingend Notwendig.</p>
+				<hr />
 				<h:panelGrid columns="2">
-					<p><h:outputLabel value="Rollenname" styleClass="label"/></p>
-					<h:inputText value="#{rrBean.currentRole.roleName}" required="true" label="Rollenname"
-						styleClass="i_text" tabindex="1"/>
+					<p>
+						<h:outputLabel value="Rollenname" styleClass="label" />
+					</p>
+					<h:inputText value="#{rrBean.currentRole.roleName}" required="true"
+						label="Rollenname" styleClass="i_text" tabindex="1" />
 				</h:panelGrid>
-				<hr/>
+				<hr />
 				<h:panelGrid>
-					<h:outputLabel value="Attribute" styleClass="label"/>
+					<h:outputLabel value="Attribute" styleClass="label" />
 					<p:commandButton value="Neues Attribut anlegen"
-						actionListener="#{rrBean.createNewAttribute()}" update="@none"
+						actionListener="#{rrBean.createNewAttribute()}" update="editCurrentAttributeForm"
 						ajax="true" process="@this"
 						onclick="PF('editCurrentAttribute').show();"
 						styleClass="i_submit_button_popup" />
 					<h:dataTable id="roleAttributes"
 						value="#{rrBean.currentRole.attributes}" var="attr"
-						emptyMessage="Keine Attribute definiert" styleClass="admin" headerClass="adminHeader_popup" rowClasses="adminOddRow, adminEvenRow">
+						emptyMessage="Keine Attribute definiert" styleClass="admin"
+						headerClass="adminHeader_popup"
+						rowClasses="adminOddRow, adminEvenRow">
 						<p:column>
 							<f:facet name="header">
-								<h:outputText value="Name"/>
+								<h:outputText value="Name" />
 							</f:facet>
 							<h:outputText value="#{attr.attributeName}" />
 						</p:column>
@@ -45,27 +49,31 @@ Attribute sind nicht zwingend Notwendig.</p>
 								actionListener="#{rrBean.editCurrentAttribute(attr)}"
 								onclick="PF('editCurrentAttribute').show();"
 								styleClass="i_submit_button_popup" />
-								<p:commandButton value="Löschen" update="@form"
-								process="@this"
+							<p:commandButton value="Löschen" update="@form" process="@this"
 								actionListener="#{rrBean.deleteCurrentAttribute(attr)}"
 								styleClass="i_submit_button_popup" />
 						</p:column>
 					</h:dataTable>
 				</h:panelGrid>
 				<h:panelGrid columns="2">
-					<p:commandButton value="Schließen" process="@this" update="rollenDefinitionForm" ajax="true" 
+					<p:commandButton value="Schließen" process="@this"
+						update="rollenDefinitionForm" ajax="true"
 						onclick="PF('roledefinitionDialog').hide();" immediate="true"
 						styleClass="i_submit_button_popup" />
-					<p:commandButton value="Speichern" ajax="true" process="@form" update="rollenDefinitionForm rolesAndRightsForm" oncomplete="PF('roledefinitionDialog').hide();"
-						actionListener="#{rrBean.saveCurrentRole()}" styleClass="i_submit_button_popup" />
+					<p:commandButton value="Speichern" ajax="true" process="@form"
+						update="rollenDefinitionForm rolesAndRightsForm"
+						oncomplete="PF('roledefinitionDialog').hide();"
+						actionListener="#{rrBean.saveCurrentRole()}"
+						styleClass="i_submit_button_popup" />
 				</h:panelGrid>
 			</h:panelGroup>
 		</h:form>
-		</p:dialog>
-		<p:dialog id="editCurrentAttribute" widgetVar="editCurrentAttribute" resizable="false"
-			header="Attribut definieren" dynamic="true" modal="true" styleClass="pop_up2">
+	</p:dialog>
+	<p:dialog id="editCurrentAttribute" widgetVar="editCurrentAttribute"
+		resizable="false" draggable="false" header="Attribut definieren"
+		dynamic="true" modal="true" styleClass="pop_up2">
 
-		<h:form>
+		<h:form id="editCurrentAttributeForm">
 			<h:panelGrid columns="2">
 				<h:outputLabel value="#{messages.label_name}" />
 				<h:inputText value="#{rrBean.currentAttribute.attributeName}"
@@ -79,7 +87,7 @@ Attribute sind nicht zwingend Notwendig.</p>
 					styleClass="i_submit_button_popup"
 					actionListener="#{rrBean.saveCurrentAttribute()}"
 					oncomplete="PF('editCurrentAttribute').hide();"
-					update="rollenDefinitionForm:roleDefGroup" />
+					update="rollenDefinitionForm:roleAttributes" />
 			</h:panelGrid>
 		</h:form>
 	</p:dialog>
