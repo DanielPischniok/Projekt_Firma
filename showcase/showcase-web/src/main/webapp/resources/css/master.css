@@ -119,12 +119,12 @@ legend {
 }
 
 .i_submit_button {
-	color: #F8F8F8;
+	color: #001b45;
 	font-size: 95%;
-	border-radius:5px;
+	border-radius:0px;
 	border-width: 1px;
 	border-color: #001b45;
-	background-color: #00368A;
+	background-color: #F8F8F8;
 	cursor: pointer;
 }
 
@@ -135,14 +135,14 @@ legend {
 }
 
 .i_submit_button_popup {
-	color: #F8F8F8;
+	color: #001b45;
 	font-size: 95%;
-	border-radius:5px;
+	border-radius:0px;
 	border-width: 1px;
 	border-color: #001b45;
 	margin-top: 2%;
 	margin-bottom: 2%;
-	background-color: #45669B;
+	background-color: #F8F8F8;
 	cursor: pointer;
 }
 
@@ -246,7 +246,7 @@ hr.flow {
 	margin-bottom: 1%;
 	margin-top: 1%;
 	text-align: left;
-	white-space: pre-wrap; 
+	white-space: normal; 
 	width: 70%;
 }
 /*----------------------------------------------------------------------------------------*/

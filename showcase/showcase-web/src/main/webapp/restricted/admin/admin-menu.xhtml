@@ -21,17 +21,19 @@ $(document).ready(function(){
 <dt class="link"><a href="#" onclick="window.location.href='#{request.contextPath}/restricted/admin/rr/overview.jsf';">#{messages.admin_roles_overview}</a>
 </dt>
 <dd class="text" style="#{view.viewId == '/restricted/admin/rr/overview.xhtml'?'display:block;':''}">
-<h7>Rollendefinition</h7>
+<h7>#{messages.admin_roles_overview_sub}</h7>
 <hr/>
 <p:commandButton actionListener="#{rrBean.createNewRole()}"
-				value="Rolle erstellen" update="rollenDefinitionForm"
+				value="Rolle erstellen" update="@all"
 				oncomplete="PF('roledefinitionDialog').show();"
 				styleClass="i_submit_button" ajax="true"/></dd>
-<dt class="link"><a href="#">Details</a></dt>
-<dd class="text"><h7>Test</h7>
+<dt class="link"><a href="#" onclick="window.location.href='#{request.contextPath}/restricted/admin/usermgt/overview.jsf';">#{messages.user_mgmt_overview}</a></dt>
+<dd class="text" style="#{view.viewId == '/restricted/admin/usermgt/overview.xhtml'?'display:block;':''}">
+<h7>#{messages.user_mgmt_overview_sub}</h7>
 <hr/>
-<p:commandButton value="Platzhalter" styleClass="i_submit_button"/></dd>
-<dt class="link"><a href="#">Details</a></dt>
+<p:commandButton value="#{messages.button_create_new_user}" actionListener="#{userBean.createNewUser()}" ajax="true" 
+			oncomplete="PF('editUserDialog').show();" process="@this" styleClass="i_submit_button"/></dd>
+<dt class="link"></dt>
 <dd class="text"><h7>Test</h7>
 <hr/>
 <p:commandButton value="Platzhalter" styleClass="i_submit_button"/></dd>

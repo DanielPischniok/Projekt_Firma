@@ -7,11 +7,9 @@
 
 <ui:composition template="/WEB-INF/templates/admin/admintemplate.xhtml">
 	<ui:define name="admincontent">
-		<h1>User Administration</h1>
+		<h1>#{messages.user_mgmt_overview_head}</h1>
 		<br/>
 		<h:form id="userOverviewForm">
-		<p:commandButton value="#{messages.button_create_new_user}" actionListener="#{userBean.createNewUser()}" ajax="true" 
-			oncomplete="PF('editUserDialog').show();" process="@this" update="editUserForm" />
 		<h:dataTable id="UserOverviewTable" value="#{userBean.allUsers}" var="user">
 						<h:column>
 							<f:facet name="header">
