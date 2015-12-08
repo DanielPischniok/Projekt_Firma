@@ -324,8 +324,16 @@ span.ui-growl-image-info{
 }
 
 /*ICON*/
+.icon_menu {
+	display: inline;
+	font-size: 20px;
+}
 
 .icon_start {
 	display: block;
 	font-size: 100px;
+}
+
+.icon_button {
+	font-family: 'Projekt_Firma' !important;
 }

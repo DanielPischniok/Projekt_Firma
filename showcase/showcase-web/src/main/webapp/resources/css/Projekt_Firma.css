@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Projekt_Firma';
+    src: url('#{request.contextPath}/resources/fonts/Projekt_Firma.eot');
+    src: url('#{request.contextPath}/resources/fonts/Projekt_Firma.eot?#iefix') format('embedded-opentype'),
+         url('#{request.contextPath}/resources/fonts/Projekt_Firma.woff') format('woff'),
+         url('#{request.contextPath}/resources/fonts/Projekt_Firma.ttf') format('truetype'),
+         url('#{request.contextPath}/resources/fonts/Projekt_Firma.svg#Projekt_Firma') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+[class*='icon-']:before{
+	display: inline-block;
+   font-family: 'Projekt_Firma';
+   font-style: normal;
+   font-weight: normal;
+   line-height: 1px;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   color: #F8F8F8;
+}
+.icon-user:before{content:'\0041';}
+.icon-logout:before{content:'\0042';}
+.icon-project:before{content:'\0043';}
+.icon-admin:before{content:'\0044';}
+.icon-delete:before{content:'\0045';}
+.icon-finance:before{content:'\0046';}

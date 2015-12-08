@@ -39,10 +39,10 @@
 							update="rollenDefinitionForm"
 							oncomplete="PF('roledefinitionDialog').show();"
 							styleClass="i_submit_button" />
-						<p:commandButton value="#{messages.button_delete}"
+						<p:commandButton value="Löschen"
 							action="#{rrBean.deleteCurrentRoleDef(role)}"
 							update="rolesAndRightsForm globaleMessages"
-							styleClass="i_submit_button">
+							styleClass="i_submit_button icon_button">
 							<p:confirm header="Bestätigung" message="Sind Sie sicher?"
 								icon="ui-icon-alert" />
 						</p:commandButton>
