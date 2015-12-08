@@ -1,10 +1,5 @@
 /*---FONT---*/
-@font-face { font-family: 'Fontello'; 
-			 src: url('#{request.contextPath}/resources/font/fontello.eot#') format('eot'), 
-			      url('#{request.contextPath}/resources/font/fontello.woff') format('woff'), 
-			      url('#{request.contextPath}/resources/font/fontello.ttf') format('truetype'), 
-			      url('#{request.contextPath}/resources/font/fontello.svg#fontello') format('svg'); 
-			}
+
 
 /* ALLGEMEINE Regel */
 html,body {
@@ -270,12 +265,6 @@ hr.flow {
 	-moz-filter: unset;
 	-ms-filter: unset;	
 	-o-filter: unset; 
-}
-
-i.icon-user{
-	font-family: 'Fontello';
-	font-style: normal;
-	color: #F8F8F8;
 }
 
 /* PRIMEFACES */
