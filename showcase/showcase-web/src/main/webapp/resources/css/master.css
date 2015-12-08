@@ -322,3 +322,10 @@ span.ui-growl-image-info{
 	font-weight: bold;
 	font-size: 16px;
 }
+
+/*ICON*/
+
+.icon_start {
+	display: block;
+	font-size: 100px;
+}

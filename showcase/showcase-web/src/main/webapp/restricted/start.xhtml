@@ -18,7 +18,8 @@
 			<a href="#">Finanzen</a>
 		  </td>
 		  <td class="start">
-			<h:link outcome="/restricted/admin/administration.jsf" class="link">Administration</h:link>
+			<h:link outcome="/restricted/admin/administration.jsf" class="link">
+			<span class="icon icon-admin1 icon_start"/>Administration</h:link>
 		  </td>
 		 </tr>
 		 <tr>
@@ -27,7 +28,8 @@
 		  <td class="start">
 		  </td>		
 		  <td class="start">
-			<h:commandLink action="#{loginBean.logout()}">Abmelden</h:commandLink>
+		  
+			<h:commandLink action="#{loginBean.logout()}"><span class="icon icon-abmelden icon_start"/>Abmelden</h:commandLink>
 		  </td>
 		 </tr>
 		</table>
