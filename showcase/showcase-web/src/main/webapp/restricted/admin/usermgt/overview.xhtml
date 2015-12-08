@@ -33,12 +33,15 @@
 							</ul>
 						</h:column>
 						<h:column>
+						<f:facet name="header">
+						<h:outputText value="Optionen" />
+					</f:facet>
 							<p:commandButton id="editButton" actionListener="#{userBean.editCurrentUser(user)}" update="editUserForm" process="@this"
 								ajax="true" oncomplete="PF('editUserDialog').show();" value="#{messages.button_edit}"
 								styleClass="i_submit_button"/>
 							<p:commandButton id="deleteButton" actionListener="#{userBean.deleteCurrentUser(user)}" update="editUserForm" process="@this"
-								ajax="true" value="#{messages.button_delete}"
-								styleClass="i_submit_button">
+								ajax="true" value="E"
+								styleClass="i_submit_button icon_button">
 								<p:confirm header="Bestätigung" message="Sind Sie sicher?" icon="ui-icon-alert" />
 							</p:commandButton>
 						</h:column>
