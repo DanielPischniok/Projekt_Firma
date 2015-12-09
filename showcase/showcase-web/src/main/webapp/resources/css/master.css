@@ -1,6 +1,3 @@
-/*---FONT---*/
-
-
 /* ALLGEMEINE Regel */
 html,body {
 	max-width: 100%;
@@ -324,11 +321,13 @@ span.ui-growl-image-info{
 }
 
 /*ICON*/
-.icon_menu {
-	display: inline;
-	font-size: 20px;
-}
 
+.icon_subhead {
+	font-family: 'Projekt_Firma' !important;
+	font-size: 25px;
+	float: right;
+	padding-right: 1%;
+}
 .icon_start {
 	display: block;
 	font-size: 100px;
@@ -337,4 +336,8 @@ span.ui-growl-image-info{
 .icon_button {
 	font-family: 'Projekt_Firma' !important;
 	font-size: 15px;
+}
+
+.icon_button:HOVER {
+	color: #F8F8F8;
 }

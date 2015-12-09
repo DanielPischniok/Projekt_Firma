@@ -39,6 +39,13 @@ li.modul {
 	float: left;
 }
 
+li.icon_menu {
+	display: inline-block;
+	font-size: 25px;
+	float: right;
+	padding-right: 0.5%;
+}
+
 li.suche {
 	float: right;
 	padding-right: 8px;
