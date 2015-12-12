@@ -112,10 +112,12 @@ public class UserBean implements Serializable {
 		if (currentUser.getUserId() == null || currentUser.getUserId() == 0) {
 			currentUser.setPassword(projectService.generatePassword(currentUser.getPassword()));
 		}
+		
+		if(currentUser.getRoles() == null){
+			currentUser.setRoles(new ArrayList<Role>());
+		}
+
 		for(String selectedRole: dualListRoleNames.getTarget()){
-			if(currentUser.getRoles() == null){
-				currentUser.setRoles(new ArrayList<Role>());
-			}
 			boolean newRole = true;
 			for(Role r : currentUser.getRoles()){
 				if(r.getRoleName().equals(selectedRole)){
@@ -129,7 +131,20 @@ public class UserBean implements Serializable {
 				currentUser.getRoles().add(role);
 			}
 		}
+		
+		List<Role> deletedRows = new ArrayList<>();
+		for(String unselectedRow : dualListRoleNames.getSource()){
+			for(Role r : currentUser.getRoles()){
+				if(r.getRoleName().equals(unselectedRow)){
+					deletedRows.add(r);
+				}
+			}
+		}
+		
 		userService.saveOrUpdate(currentUser);
+		if(!deletedRows.isEmpty()){
+			userService.deleteUserRoles(deletedRows);
+		}
 		jsfUtils.addGlobalFacesMessage(FacesMessage.SEVERITY_INFO,
 				currentUser.getUserIdentifier() + " wurde erfolgreich gespeichert");
 		init();

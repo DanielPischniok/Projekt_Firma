@@ -64,5 +64,14 @@ public class UserService {
 			em.merge(r);
 		}
 	}
+	
+	public void deleteUserRoles(List<Role> rolesForDelete){
+		if(rolesForDelete != null){
+			for(Role r: rolesForDelete){
+				Role mR = em.merge(r);
+				em.remove(mR);
+			}
+		}
+	}
 
 }
