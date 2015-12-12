@@ -23,7 +23,7 @@ public class UserService {
 	private EntityManager em;
 	
 	public List<ApplicationUser> findAllUsers(){
-		List<ApplicationUser> result =  em.createQuery("SELECT distinct(au) FROM ApplicationUser au left join fetch au.roles ar",ApplicationUser.class).getResultList();
+		List<ApplicationUser> result =  em.createQuery("SELECT distinct(au) FROM ApplicationUser au left join fetch au.roles ar order by au.userIdentifier",ApplicationUser.class).getResultList();
 		for(ApplicationUser u: result){
 			u.getRoles().size();
 		}

@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderBy;
 import javax.persistence.Table;
 
 @Entity
@@ -21,7 +22,8 @@ public class ApplicationUser implements Serializable{
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long userId;
 	
-	@Column(name="username")	
+	@Column(name="username")
+	@OrderBy
 	private String userIdentifier;
 	
 	@Column(name="password")
