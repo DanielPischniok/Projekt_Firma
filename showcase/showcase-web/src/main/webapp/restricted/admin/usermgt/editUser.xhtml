@@ -14,16 +14,14 @@
 				<h:outputText value="#{userBean.currentUser.userId}" />
 				<h:outputLabel value="#{messages.label_username}" />
 				<h:inputText value="#{userBean.currentUser.userIdentifier}" styleClass="i_text"/>
-				<ui:remove>
-				<h:outputLabel value="#{messages.label_password}" />
-				<h:inputSecret value="#{userBean.currentUser.password}" styleClass="i_text"/>
-				</ui:remove>
+
+				<h:outputLabel value="#{messages.label_password}" rendered="#{empty userBean.currentUser.userId}" />
+				<h:inputSecret value="#{userBean.currentUser.password}" rendered="#{empty userBean.currentUser.userId}" styleClass="i_text"/>
+
 				<h:outputLabel value="#{messages.label_user_roles}"></h:outputLabel>
-				<h:selectManyMenu value="#{userBean.selectedRoles}"
-					converter="genericSelectItemsConverter" var="role"
-					showCheckbox="true">
-					<f:selectItems value="#{userBean.allRoleValues}" />
-				</h:selectManyMenu>
+				<p:pickList id="userRolePickList" value="#{userBean.dualListRoleNames}" var="roles" itemLabel="#{roles}" itemValue="#{roles}">
+					<p:ajax event="transfer" listener="#{userBean.onTransfer}" />
+				</p:pickList>
 			</h:panelGrid>
 			<h:panelGrid columns="2">
 				<p:commandButton ajax="true" value="#{messages.button_abort}"
@@ -33,7 +31,7 @@
 				<p:commandButton ajax="true" value="#{messages.button_save}"
 					actionListener="#{userBean.saveCurrentUser()}"
 					oncomplete="PF('editUserDialog').hide();" process="@form"
-					update="userOverviewForm globaleMessages" 
+					update="userOverviewForm" 
 					styleClass="i_submit_button_popup"/>
 			</h:panelGrid>
 		</h:form>

@@ -32,8 +32,9 @@ $(document).ready(function(){
 <dd class="text" style="#{view.viewId == '/restricted/admin/usermgt/overview.xhtml'?'display:block;':''}">
 <h7>#{messages.user_mgmt_overview_sub}</h7>
 <hr/>
-<p:commandButton value="#{messages.button_create_new_user}" actionListener="#{userBean.createNewUser()}" ajax="true" 
-			oncomplete="PF('editUserDialog').show();" process="@this" styleClass="i_submit_button"/>
+<p:commandButton rendered="#{view.viewId == '/restricted/admin/usermgt/overview.xhtml'}"
+			value="#{messages.button_create_new_user}" actionListener="#{userBean.createNewUser()}" ajax="true" 
+			oncomplete="PF('editUserDialog').show();" process="@this" styleClass="i_submit_button" update="editUserForm"/>
 </dd>
 <dt class="link"></dt>
 <dd class="text"><h7>Test</h7>

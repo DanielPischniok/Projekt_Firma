@@ -55,5 +55,10 @@ public class UserRoleDefinition implements Serializable{
 	public void setAttributes(List<UserRoleAttributeDefinition> attributes) {
 		this.attributes = attributes;
 	}
+
+	@Override
+	public String toString() {
+		return roleName;
+	}
 	
 }

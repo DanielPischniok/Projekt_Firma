@@ -11,7 +11,7 @@ public class PasswordGeneratorTest {
 	
 	@Test
 	public void generatePassword(){
-		String pwd = "123";
+		String pwd = "test";
 		
 
 		MessageDigest md;
